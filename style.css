@@ -1,0 +1,1625 @@
+/* ==========================================================
+   LI YAN ARCHIVE
+   style.css
+   Version 0.2
+========================================================== */
+
+/* ========= 字体 ========= */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ========= 全局变量 ========= */
+
+:root{
+
+    /* 离颜代表色 */
+    --pink:#EFA1B0;
+
+    /* 深一点的强调色 */
+    --pink-dark:#C96F83;
+
+    /* 浅粉背景 */
+    --pink-light:#FCECEF;
+
+    /* 网站 */
+    --bg:#FFF9FA;
+
+    /* 卡片 */
+    --card:#FFFFFF;
+
+    /* 文字 */
+    --text:#333333;
+
+    --sub:#888888;
+
+    /* 边框 */
+    --border:#F1D8DE;
+
+    /* 阴影 */
+    --shadow:
+    0 12px 30px rgba(201,111,131,.12);
+
+    /* 圆角 */
+    --radius:18px;
+
+}
+
+/* ========= 重置 ========= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+    "Inter",
+    "Noto Serif SC",
+    serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ========= 滚动条 ========= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F8EEF0;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--pink);
+
+    border-radius:20px;
+
+}
+
+/* ========= 通用 ========= */
+
+section{
+
+    width:100%;
+
+    padding:120px 8%;
+
+}
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+h1{
+
+    font-size:90px;
+
+    font-weight:700;
+
+    letter-spacing:12px;
+
+}
+
+h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+    color:var(--pink-dark);
+
+}
+
+h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:var(--sub);
+
+    line-height:2;
+
+}
+
+/* ========= Loading ========= */
+
+#loading{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:.8s;
+
+}
+
+#loading h1{
+
+    color:var(--pink-dark);
+
+    letter-spacing:8px;
+
+}
+
+/* ========= 导航 ========= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(255,249,250,.82);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    color:var(--pink-dark);
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+nav a:hover{
+
+    color:var(--pink-dark);
+
+}
+
+/* ========= 首页 ========= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* 背景光晕 */
+
+.hero::before{
+
+    content:"";
+
+    width:650px;
+
+    height:650px;
+
+    background:rgba(239,161,176,.18);
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+}
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero h1{
+
+    color:var(--text);
+
+}
+
+
+
+/* 档案标签 */
+
+
+.archive-label{
+
+    color:var(--pink-dark);
+
+    font-size:14px;
+
+    letter-spacing:8px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* 信息栏 */
+
+
+.archive-info{
+
+    width:280px;
+
+    margin:45px auto;
+
+
+    padding:20px 0;
+
+
+    border-top:
+    1px solid var(--border);
+
+
+    border-bottom:
+    1px solid var(--border);
+
+}
+
+
+
+.archive-info p{
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    color:var(--sub);
+
+}
+
+
+
+/* 描述 */
+
+
+.description{
+
+    margin-top:40px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+
+/* ========= WORLD 卡片布局 ========= */
+
+
+.world-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+
+
+.card{
+
+    display:block;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+}
+
+.card h3{
+
+    font-size:26px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+
+.card p{
+
+    color:var(--sub);
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--pink);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.world-id{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    color:var(--pink-dark);
+
+    margin-bottom:15px;
+
+}
+
+/* =========================
+   WORLD DETAIL TYPOGRAPHY
+   世界线详情页文字
+========================= */
+
+
+.world-page{
+
+    padding-top:150px;
+
+    padding-bottom:120px;
+
+}
+
+
+
+.world-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+/* 世界线标题区域 */
+
+.world-header{
+
+    text-align:center;
+
+    margin-bottom:90px;
+
+}
+
+
+
+.world-header .world-id{
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    color:var(--pink-dark);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.world-header h1{
+
+    font-size:52px;
+
+    letter-spacing:5px;
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.world-header h2{
+
+    font-size:22px;
+
+    font-weight:400;
+
+    letter-spacing:3px;
+
+    color:var(--pink-dark);
+
+}
+
+
+
+/* =========================
+   WORLD DETAIL TYPOGRAPHY
+   世界线详情页
+========================= */
+
+.world-page{
+
+    padding-top:150px;
+
+    padding-bottom:120px;
+
+}
+
+.world-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+/* ---------- 标题 ---------- */
+
+.world-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.world-header .world-id{
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    color:var(--pink-dark);
+
+    margin-bottom:20px;
+
+}
+
+.world-header h1{
+
+    font-size:52px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    color:var(--text);
+
+}
+
+
+/* ---------- 世界线简介 ---------- */
+
+.intro-text{
+
+    font-size:18px;
+
+    line-height:2.2;
+
+    color:#555;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+/* ---------- 内容区域 ---------- */
+
+.world-section{
+
+    padding:20px 0 50px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.world-section:last-child{
+
+    border-bottom:none;
+
+}
+
+
+/* 小标题 */
+
+.world-section h2{
+
+    font-size:22px;
+
+    color:var(--pink-dark);
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+}
+
+
+/* 正文 */
+
+.world-section p{
+
+    font-size:16px;
+
+    line-height:2.2;
+
+    color:#555;
+
+    letter-spacing:.5px;
+
+}
+
+/* =========================
+   设定简介
+========================= */
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:30px;
+
+    margin-top:25px;
+
+}
+
+.info-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:28px;
+
+}
+
+.info-card h3{
+
+    font-size:18px;
+
+    color:var(--pink-dark);
+
+    margin-bottom:20px;
+
+}
+
+.profile-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.profile-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #f4e7ea;
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+.profile-list li:last-child{
+
+    border-bottom:none;
+
+}
+
+.profile-list span{
+
+    color:var(--pink-dark);
+
+    font-weight:600;
+
+}
+
+/* =========================
+   设定简介
+========================= */
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:30px;
+
+    margin-top:25px;
+
+}
+
+.info-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:28px;
+
+}
+
+.info-card h3{
+
+    font-size:18px;
+
+    color:var(--pink-dark);
+
+    margin-bottom:20px;
+
+}
+
+.profile-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.profile-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #f4e7ea;
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+.profile-list li:last-child{
+
+    border-bottom:none;
+
+}
+
+.profile-list span{
+
+    color:var(--pink-dark);
+
+    font-weight:600;
+
+}
+
+.info-card p{
+
+    line-height:2.1;
+
+    text-align:justify;
+
+    color:#555;
+
+}
+
+.info-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* =========================
+   外貌特征
+========================= */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    margin-top:30px;
+
+}
+
+.feature-card{
+
+    display:flex;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    min-height:220px;
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 24px rgba(201,111,131,.12);
+
+}
+
+.feature-text{
+
+    width:50%;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* =========================
+   外貌特征 Card
+========================= */
+
+
+/* 三列内容布局 */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    margin-top:30px;
+
+}
+
+
+
+/* 单个 Card */
+
+.feature-card{
+
+    display:flex;
+
+    background:#ffffff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    height:240px;
+
+    transition:.3s;
+
+}
+
+
+
+.feature-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 24px rgba(201,111,131,.12);
+
+}
+
+
+/* 左侧文字区域 */
+
+.feature-text{
+
+    width:50%;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+/* 标题区域 */
+
+.feature-header{
+
+    height:68px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    margin-bottom:18px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+
+/* 中文标题 */
+
+.feature-header h3{
+
+    margin:0;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    font-size:22px;
+
+    color:var(--pink-dark);
+
+    font-weight:600;
+
+}
+
+
+
+/* 英文副标题 */
+
+.feature-header span{
+
+    display:block;
+
+    height:14px;
+
+    margin-top:6px;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#999;
+
+}
+
+
+
+/* 正文 */
+
+.feature-text p{
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    text-justify:inter-ideograph;
+
+    color:#555;
+
+}
+
+
+
+/* 同一个 Card 内多段文字 */
+
+.feature-text p + p{
+
+    margin-top:8px;
+
+}
+
+
+
+/* 右侧图片 */
+
+.feature-image{
+
+    width:50%;
+
+}
+
+
+
+.feature-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+
+}
+
+/* =========================
+   服设展示
+========================= */
+
+
+.outfit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    margin-top:35px;
+
+}
+
+
+
+.outfit-card{
+
+    display:block;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+
+.outfit-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* 图片区域 */
+
+.outfit-image{
+
+    width:100%;
+
+    aspect-ratio:1 / 1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+
+
+.outfit-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+
+}
+
+
+
+.outfit-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* 编号标题 */
+
+.outfit-image h3{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    margin:0;
+
+    font-size:20px;
+
+    letter-spacing:4px;
+
+    color:var(--pink-dark);
+
+    white-space:nowrap;
+
+
+    -webkit-text-stroke:1.5px #ffffff;
+
+
+    text-shadow:
+
+    0 2px 6px rgba(0,0,0,.35);
+
+    background:rgba(255,255,255,.25);
+
+    padding:5px 15px;
+
+    border-radius:999px;
+
+}
+
+
+
+/* =========================
+   手机端适配
+========================= */
+
+
+@media(max-width:768px){
+
+
+/* ========= 导航 ========= */
+
+
+header{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:18px 6%;
+
+    gap:12px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+
+}
+
+
+nav{
+
+    margin-top:5px;
+
+    gap:22px;
+
+}
+
+
+nav a{
+
+    font-size:14px;
+
+}
+
+
+
+/* ========= 全局 ========= */
+
+
+section{
+
+    padding:90px 6%;
+
+}
+
+
+h1{
+
+    font-size:45px;
+
+    letter-spacing:8px;
+
+}
+
+
+h2{
+
+    font-size:32px;
+
+}
+
+
+h3{
+
+    font-size:22px;
+
+}
+
+
+
+
+/* ========= 首页 ========= */
+
+
+.hero{
+
+    padding-top:100px;
+
+}
+
+
+
+.archive-label{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.archive-info{
+
+    width:220px;
+
+    margin:35px auto;
+
+}
+
+
+
+.archive-info p{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.description{
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+
+
+/* ========= WORLD列表 ========= */
+
+
+.world-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    padding:28px;
+
+    margin-bottom:0;
+
+}
+
+
+.card h3{
+
+    font-size:22px;
+
+}
+
+
+.world-id{
+
+    font-size:11px;
+
+}
+
+
+
+
+
+/* ========= 世界线详情页 ========= */
+
+
+.world-page{
+
+    padding-top:120px;
+
+}
+
+
+.world-content{
+
+    width:100%;
+
+}
+
+
+.world-header{
+
+    margin-bottom:50px;
+
+}
+
+
+.world-header h1{
+
+    font-size:38px;
+
+    letter-spacing:4px;
+
+}
+
+
+
+.world-header .world-id{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+/* ========= 设定简介 ========= */
+
+
+.intro-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+
+.info-card{
+
+    padding:22px;
+
+}
+
+
+.info-card h3{
+
+    font-size:18px;
+
+}
+
+
+.profile-list li{
+
+    font-size:14px;
+
+}
+
+
+
+.info-card p{
+
+    font-size:14px;
+
+    line-height:2;
+
+}
+
+
+
+
+/* ========= 外貌特征 ========= */
+
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+
+
+.feature-card{
+
+    height:220px;
+
+}
+
+
+
+.feature-text{
+
+    width:50%;
+
+    padding:20px;
+
+}
+
+
+
+.feature-header{
+
+    height:60px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.feature-header h3{
+
+    font-size:19px;
+
+}
+
+
+
+.feature-header span{
+
+    font-size:11px;
+
+}
+
+
+
+.feature-text p{
+
+    font-size:13px;
+
+    line-height:1.8;
+
+}
+
+
+
+.feature-image{
+
+    width:50%;
+
+}
+
+
+
+
+
+/* ========= 服设 ========= */
+
+
+.outfit-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+
+.outfit-image{
+
+    border-radius:15px;
+
+}
+
+
+
+.outfit-image h3{
+
+    bottom:15px;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    padding:4px 10px;
+
+    -webkit-text-stroke:1px #ffffff;
+
+}
+
+
+
+
+
+}
+
+
+/* ========= 小屏手机 ========= */
+
+
+@media(max-width:420px){
+
+
+.outfit-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.feature-card{
+
+    height:200px;
+
+}
+
+
+.feature-text{
+
+    padding:18px;
+
+}
+
+
+.feature-header h3{
+
+    font-size:18px;
+
+}
+
+
+
+}
