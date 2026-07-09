@@ -68,15 +68,6 @@ World
 <div class="outfit-header">
 
 
-<a href="../modern-main.html#outfits"
-class="back-link">
-
-← BACK TO WORLD 01
-
-</a>
-
-
-
 <div class="outfit-title">
 
 
@@ -205,10 +196,11 @@ alt="OUTFIT 02">
 
 
 <a href="#"
-class="gallery-item">
+class="gallery-item"
+data-index="0">
 
 
-<img src="../../assets/images/outfits/outfit02/ref01.png"
+<img src="../../assets/images/outfits/outfit02/ref01.PNG"
 
 alt="Reference 01">
 
@@ -219,7 +211,8 @@ alt="Reference 01">
 
 
 <a href="#"
-class="gallery-item">
+class="gallery-item"
+data-index="1">
 
 
 <img src="../../assets/images/outfits/outfit02/ref02.png"
@@ -233,7 +226,8 @@ alt="Reference 02">
 
 
 <a href="#"
-class="gallery-item">
+class="gallery-item"
+data-index="2">
 
 
 <img src="../../assets/images/outfits/outfit02/ref03.png"
@@ -264,17 +258,66 @@ alt="Reference 03">
 <div class="lightbox" id="lightbox">
 
 
-<span class="lightbox-close">
+    <button class="lightbox-prev">
 
-×
+        ‹
 
-</span>
+    </button>
 
 
-<img id="lightbox-img">
+    <img id="lightbox-img">
+
+
+    <button class="lightbox-next">
+
+        ›
+
+    </button>
+
+
+    <div class="lightbox-counter">
+
+
+        <span id="current-image">
+
+            1
+
+        </span>
+
+
+        /
+
+
+        <span id="total-images"></span>
+
+
+    </div>
+
+
+    <span class="lightbox-close">
+
+        ×
+
+    </span>
 
 
 </div>
+
+
+
+
+
+<!-- =========================
+     返回 World
+========================= -->
+
+
+<a href="../modern-main.html#outfits"
+class="back-link bottom-back">
+
+← BACK TO WORLD 01
+
+</a>
 
 
 
