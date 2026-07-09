@@ -231,7 +231,21 @@
 }
 
 
+/* =========================
+   Gallery Tip
+========================= */
 
+.gallery-tip{
+
+    margin-bottom:20px;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    color:#999;
+
+}
 
 
 /* =========================
