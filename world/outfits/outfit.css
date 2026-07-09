@@ -1,0 +1,706 @@
+/* ==========================================================
+   LI YAN ARCHIVE
+   outfit.css
+   Outfit Detail Page
+========================================================== */
+
+
+/* =========================
+   页面主体
+========================= */
+
+.outfit-page{
+
+    padding-top:150px;
+
+    padding-bottom:120px;
+
+}
+
+
+.outfit-content{
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+/* =========================
+   页面标题
+========================= */
+
+
+.outfit-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+
+.outfit-header h1{
+
+    font-size:52px;
+
+    color:var(--text);
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.outfit-title{
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* =========================
+   Section
+========================= */
+
+
+.outfit-section{
+
+    margin:60px 0;
+
+    padding-bottom:55px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+
+.outfit-section:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.outfit-section h2{
+
+    font-size:24px;
+
+    color:var(--pink-dark);
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/* =========================
+   Outfit Detail
+========================= */
+
+
+.outfit-detail{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+    margin-bottom:40px;
+
+}
+
+
+.outfit-detail.full-image{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+/* 主图 */
+
+
+.outfit-preview{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.outfit-preview img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+
+
+
+
+/* Notes */
+
+
+.outfit-notes{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.outfit-notes h3{
+
+    font-size:22px;
+
+    color:var(--pink-dark);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.outfit-notes ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.outfit-notes li{
+
+    position:relative;
+
+    padding-left:18px;
+
+    margin-bottom:18px;
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+
+
+.outfit-notes li::before{
+
+    content:"•";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--pink-dark);
+
+}
+
+
+/* =========================
+   Gallery Tip
+========================= */
+
+.gallery-tip{
+
+    margin-bottom:20px;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    color:#999;
+
+}
+
+
+/* =========================
+   Gallery
+========================= */
+
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+
+
+
+
+.gallery-item{
+
+    display:block;
+
+    aspect-ratio:1;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    box-shadow:0 8px 24px rgba(201,111,131,.08);
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+
+
+
+
+/* 单独调整缩略图显示范围 */
+
+
+.gallery-top{
+
+    object-position:center top;
+
+}
+
+.gallery-left{
+
+    object-position:left center;
+
+}
+
+
+
+
+
+.gallery-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(201,111,131,.16);
+
+}
+
+
+
+.gallery-item:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Lightbox
+========================= */
+
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+
+
+.lightbox.active{
+
+    display:flex;
+
+}
+
+
+
+.lightbox img{
+
+    max-width:80vw;
+
+    max-height:85vh;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+    user-select:none;
+
+}
+
+
+
+
+
+/* 关闭按钮 */
+
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    font-size:45px;
+
+    line-height:1;
+
+    color:white;
+
+    cursor:pointer;
+
+    z-index:10000;
+
+}
+
+
+
+
+
+/* 左右按钮 */
+
+
+.lightbox-prev,
+.lightbox-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:54px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    backdrop-filter:blur(6px);
+
+}
+
+
+
+.lightbox-prev{
+
+    left:35px;
+
+}
+
+
+
+.lightbox-next{
+
+    right:35px;
+
+}
+
+
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+
+    background:rgba(255,255,255,.3);
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+
+
+
+
+/* 图片计数 */
+
+
+.lightbox-counter{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    background:rgba(0,0,0,.35);
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   返回 World 按钮
+========================= */
+
+
+.back-link{
+
+    color:var(--pink-dark);
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    transition:.3s;
+
+}
+
+
+
+.bottom-back{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:70px;
+
+}
+
+
+
+.back-link:hover{
+
+    color:var(--pink);
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   手机端
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .outfit-page{
+
+        padding-top:120px;
+
+    }
+
+
+
+    .outfit-header h1{
+
+        font-size:38px;
+
+        letter-spacing:3px;
+
+    }
+
+
+
+
+    .outfit-detail{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .outfit-preview{
+
+        order:1;
+
+    }
+
+
+
+    .outfit-notes{
+
+        order:2;
+
+    }
+
+
+
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+
+
+
+    .lightbox img{
+
+        max-width:95%;
+
+        max-height:85%;
+
+    }
+
+
+
+
+    .lightbox-close{
+
+        top:20px;
+
+        right:25px;
+
+        font-size:38px;
+
+    }
+
+
+
+    .lightbox-prev,
+    .lightbox-next{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:28px;
+
+    }
+
+
+
+    .lightbox-prev{
+
+        left:12px;
+
+    }
+
+
+
+    .lightbox-next{
+
+        right:12px;
+
+    }
+
+
+
+
+    .lightbox-counter{
+
+        bottom:18px;
+
+        font-size:12px;
+
+    }
+
+
+
+}
