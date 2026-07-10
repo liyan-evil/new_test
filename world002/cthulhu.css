@@ -2766,118 +2766,71 @@
 
 }
 
-  
- 
-/* ========================= 
-   Signature Line Fix 
-========================= */ 
- 
- 
-/* 去掉结尾章节底线 */ 
- 
-.ending-section{ 
- 
-    border-bottom:none !important; 
- 
-} 
- 
- 
-/* 去掉警告框靠近署名的影响 */ 
- 
-.archive-warning{ 
- 
-    margin-bottom:0; 
- 
-} 
- 
- 
-/* 保留唯一署名分隔线 */ 
- 
-.signature{ 
- 
-    border-top:1px solid var(--border); 
- 
+
+/* =========================
+   Signature Line Fix
+========================= */
+
+
+/* 去掉结尾章节底线 */
+
+.ending-section{
+
+    border-bottom:none !important;
+
+}
+
+
+/* 去掉警告框靠近署名的影响 */
+
+.archive-warning{
+
+    margin-bottom:0;
+
+}
+
+
+/* 保留唯一署名分隔线 */
+
+.signature{
+
+    border-top:1px solid var(--border);
+
 }
 
 
 /* ==========================================================
-   MOBILE ADAPTATION
-   CTHULHU WORLD 002
+   WORLD 002
+   Mobile Responsive
+   Archive Layout Adaptation
 ========================================================== */
 
 
-/* =========================
-   GLOBAL FIX
-========================= */
-
-
-*{
-
-    box-sizing:border-box;
-
-}
-
-
-html,
-body{
-
-    width:100%;
-
-    max-width:100%;
-
-    overflow-x:hidden;
-
-}
-
-
-img{
-
-    max-width:100%;
-
-    height:auto;
-
-    display:block;
-
-}
-
-
-/* 防止主要容器撑破屏幕 */
-
-
-.world-page,
-.world-content,
-.world-section,
-.warning-section,
-.confidential-section{
-
-    width:100%;
-
-    max-width:100%;
-
-}
-
-
-
-/* =========================
-   HEADER MOBILE FIX
-========================= */
-
-
 @media(max-width:768px){
 
 
-header{
+/* =========================
+   页面整体
+========================= */
+
+
+.cthulhu-page .world-content{
 
     width:100%;
 
-    padding-left:20px;
+    padding-left:18px;
 
-    padding-right:20px;
+    padding-right:18px;
+
+    overflow:hidden;
 
 }
 
 
-.logo{
+
+/* 防止所有内容横向撑开 */
+
+.cthulhu-page *{
 
     max-width:100%;
 
@@ -2885,136 +2838,125 @@ header{
 
 
 
-nav{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:20px;
-
-}
-
-
-
-nav a{
-
-    white-space:nowrap;
-
-}
-
-
-
-}
-
-
-
 /* =========================
-   WORLD HEADER
+   Header
 ========================= */
 
 
-@media(max-width:768px){
-
-
-.world-header{
-
-    width:100%;
-
-    padding-left:15px;
-
-    padding-right:15px;
-
-}
-
-
-
-.world-header h1{
+.cthulhu-page .world-header h1{
 
     font-size:32px;
 
-    line-height:1.3;
+    line-height:1.5;
+
+    letter-spacing:3px;
 
     word-break:break-word;
 
 }
 
 
+.cthulhu-page .intro-text{
 
-.intro-text{
+    font-size:16px;
 
-    font-size:18px;
-
-}
-
-
-
-.header-quote{
-
-    width:100%;
+    letter-spacing:3px;
 
 }
 
 
 
-.header-quote p{
+.cthulhu-page .world-id{
 
-    word-break:break-word;
-
-}
-
-
+    letter-spacing:4px;
 
 }
 
 
 
 /* =========================
-   WARNING CARD
+   Warning
 ========================= */
 
 
-@media(max-width:768px){
+.warning-section{
+
+    margin:45px 0 60px;
+
+}
+
 
 
 .warning-card{
 
     width:100%;
 
-    padding:20px;
+    padding:30px 20px;
+
+    border-radius:18px;
 
 }
+
 
 
 .warning-label{
 
     font-size:12px;
 
-    word-break:break-all;
-
-}
-
-
-.warning-card p{
-
-    word-break:break-word;
-
-}
-
+    letter-spacing:3px;
 
 }
 
 
 
-/* ==========================================================
-   ENTITY PROFILE
-   图片 + 信息 手机端重排
-========================================================== */
+.warning-card h2{
+
+    font-size:30px;
+
+    letter-spacing:3px;
+
+    line-height:1.4;
+
+}
 
 
-@media(max-width:768px){
+
+.warning-card p:not(.warning-label){
+
+    font-size:14px;
+
+    line-height:1.9;
+
+}
+
+
+
+/* =========================
+   Section 标题
+========================= */
+
+
+.cthulhu-page .world-section{
+
+    padding:25px 0 40px;
+
+}
+
+
+
+.cthulhu-page .world-section h2{
+
+    font-size:22px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+/* =========================
+   Entity Profile
+========================= */
 
 
 .entity-profile{
@@ -3023,31 +2965,39 @@ nav a{
 
     flex-direction:column;
 
-    width:100%;
+    gap:30px;
 
 }
 
 
+
+/* 图片盒 */
 
 .entity-preview{
 
     width:100%;
 
-    margin-bottom:30px;
+    padding:10px;
 
 }
 
 
+
+/* 图片不要贴满 */
 
 .entity-preview img{
 
-    width:100%;
+    width:90%;
 
-    height:auto;
+    max-width:320px;
+
+    margin:0 auto;
 
 }
 
 
+
+/* 信息 */
 
 .entity-information{
 
@@ -3061,7 +3011,9 @@ nav a{
 
     font-size:26px;
 
-    line-height:1.4;
+    text-align:center;
+
+    letter-spacing:3px;
 
 }
 
@@ -3069,14 +3021,17 @@ nav a{
 
 .entity-subtitle{
 
-    font-size:16px;
+    text-align:center;
+
+    font-size:14px;
 
 }
 
 
 
-
-/* table 防止撑开页面 */
+/* =========================
+   Entity Table
+========================= */
 
 
 .entity-table{
@@ -3093,6 +3048,10 @@ nav a{
 
     width:35%;
 
+    padding:10px 5px;
+
+    font-size:13px;
+
     word-break:break-word;
 
 }
@@ -3103,24 +3062,98 @@ nav a{
 
     width:65%;
 
+    padding:10px 5px;
+
+    font-size:13px;
+
     word-break:break-word;
 
-    overflow-wrap:anywhere;
+}
+
+
+
+/* =========================
+   正文
+========================= */
+
+
+.report-block{
+
+    font-size:15px;
+
+    line-height:2;
 
 }
 
 
 
+.report-block p{
+
+    text-align:left;
+
+    word-break:break-word;
+
 }
 
 
 
-/* ==========================================================
-   IMAGE RECORD
-========================================================== */
+/* =========================
+   Archive Note
+========================= */
 
 
-@media(max-width:768px){
+.archive-note{
+
+    padding:20px;
+
+    margin:25px 0;
+
+}
+
+
+
+.archive-note p{
+
+    font-size:13px;
+
+}
+
+
+
+/* =========================
+   Archive Item
+========================= */
+
+
+.archive-item{
+
+    padding:25px 20px;
+
+}
+
+
+
+.archive-item h3{
+
+    font-size:18px;
+
+}
+
+
+
+.archive-item p{
+
+    font-size:14px;
+
+    line-height:1.9;
+
+}
+
+
+
+/* =========================
+   图片记录
+========================= */
 
 
 .record-single{
@@ -3135,6 +3168,8 @@ nav a{
 
     width:100%;
 
+    max-width:100%;
+
 }
 
 
@@ -3143,41 +3178,30 @@ nav a{
 
     width:100%;
 
-}
-
-
+    height:auto;
 
 }
 
 
 
-/* ==========================================================
-   CONFIDENTIAL FILE
-========================================================== */
-
-
-@media(max-width:768px){
+/* =========================
+   Confidential
+========================= */
 
 
 .confidential-section{
 
-    width:100%;
+    margin:70px 0;
+
+    padding:40px 20px;
 
 }
 
 
 
-.confidential-header{
+.confidential-header h2{
 
-    width:100%;
-
-}
-
-
-
-.confidential-header p{
-
-    word-break:break-word;
+    font-size:34px;
 
 }
 
@@ -3185,212 +3209,26 @@ nav a{
 
 .archive-open{
 
-    max-width:100%;
+    width:auto;
 
-    font-size:14px;
+    max-width:90%;
 
-}
+    padding:14px 25px;
 
-
-
-}
-
-
-
-/* ==========================================================
-   ARCHIVE CONTENT
-========================================================== */
-
-
-@media(max-width:768px){
-
-
-.archive-file,
-.report-block,
-.entity-record-text,
-.archive-note,
-.cult-report{
-
-    width:100%;
+    font-size:13px;
 
 }
 
 
 
-.archive-file p,
-.report-block p,
-.entity-record-text p{
-
-    word-break:break-word;
-
-    overflow-wrap:anywhere;
-
-}
-
-
-
-}
-
-
-
-/* ==========================================================
-   CORRUPTION EFFECT
-   不限制污染区域，让页面自然裁切
-========================================================== */
-
-
-/*
-   不给 corruption-zone 固定宽度
-   不使用 overflow:hidden
-   保留原始污染扩散效果
-*/
-
-
-.corruption-zone{
-
-    max-width:100%;
-
-}
-
-
-
-.corruption-layer{
-
-    white-space:nowrap;
-
-}
-
-
-
-
-@media(max-width:768px){
-
-
-.corruption-layer{
-
-    position:relative;
-
-    left:0;
-
-}
-
-
-
-.noise{
-
-    white-space:nowrap;
-
-}
-
-
-
-}
-
-
-
-/* ==========================================================
-   ARCHIVE LIST
-========================================================== */
-
-
-@media(max-width:768px){
-
-
-.archive-list{
-
-    width:100%;
-
-}
-
-
-
-.archive-item{
-
-    width:100%;
-
-}
-
-
-
-.archive-item h3{
-
-    font-size:22px;
-
-}
-
-
-
-.archive-item p{
-
-    word-break:break-word;
-
-}
-
-
-
-}
-
-
-
-/* ==========================================================
-   REPORT LIST
-========================================================== */
-
-
-@media(max-width:768px){
-
-
-.report-list{
-
-    padding-left:20px;
-
-}
-
-
-
-.report-list li{
-
-    word-break:break-word;
-
-}
-
-
-
-}
-
-
-
-/* ==========================================================
-   SIGNATURE
-========================================================== */
-
-
-@media(max-width:768px){
-
-
-.signature{
-
-    width:100%;
-
-    text-align:center;
-
-    padding:20px 10px;
-
-}
-
-
-
-.signature p{
-
-    word-break:break-word;
-
-}
-
+/* =========================
+   Archive Close
+========================= */
 
 
 .archive-close-area{
 
-    width:100%;
+    margin-top:50px;
 
 }
 
@@ -3398,7 +3236,97 @@ nav a{
 
 .archive-close{
 
-    max-width:100%;
+    padding:12px 25px;
+
+    font-size:13px;
+
+}
+
+
+
+/* =========================
+   污染文字
+========================= */
+
+
+.corruption-zone{
+
+    height:100px;
+
+    overflow:hidden;
+
+}
+
+
+
+.corruption-layer{
+
+    left:-80px;
+
+    width:calc(100% + 160px);
+
+}
+
+
+
+/* =========================
+   Whisper
+========================= */
+
+
+.whisper-layer{
+
+    width:100%;
+
+    left:0;
+
+}
+
+
+
+/* =========================
+   Signature
+========================= */
+
+
+.signature{
+
+    text-align:center;
+
+}
+
+
+
+.signature p{
+
+    font-size:14px;
+
+}
+
+
+
+/* =========================
+   Lightbox
+========================= */
+
+
+.lightbox img{
+
+    max-width:90vw;
+
+    max-height:80vh;
+
+}
+
+
+
+.lightbox-close{
+
+    top:15px;
+
+    right:15px;
+
+    font-size:35px;
 
 }
 
