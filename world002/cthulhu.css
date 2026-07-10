@@ -1083,84 +1083,201 @@
     overflow: visible;
 }
 
+
 .whisper-layer{
-    position: absolute;
-    left: 0;
-    top: -30px;
-    width: 120%;
-    height: 200px;
-    pointer-events: none;
+
+    position:absolute;
+
+    left:60px;
+
+    top:-30px;
+
+    width:110%;
+
+    height:200px;
+
+    pointer-events:none;
+
 }
+
+
 
 .whisper-layer span{
-    position: absolute;
-    display: block;
-    white-space: nowrap;
 
-    color: #8a7650;
-    font-size: 14px;
-    letter-spacing: 1px;
+    position:absolute;
 
-    opacity: .18;
+    display:block;
 
-    animation: whisperFloat 6s infinite ease-in-out alternate;
+    white-space:nowrap;
+
+
+    color:#8a7650;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+
+    opacity:.18;
+
+
+    animation:
+
+    whisperFloat 6s infinite ease-in-out alternate,
+
+    whisperFade 4s infinite ease-in-out alternate;
+
+
 }
+
 
 /* 每一句的位置 */
 
 .whisper-layer span:nth-child(1){
-    left: -20px;
-    top: 20px;
+
+    left:-20px;
+
+    top:20px;
+
+    animation-delay:0s;
+
 }
+
+
 
 .whisper-layer span:nth-child(2){
-    left: 180px;
-    top: -10px;
+
+    left:180px;
+
+    top:-10px;
+
+    animation-delay:.8s;
+
 }
+
+
 
 .whisper-layer span:nth-child(3){
-    right: 20px;
-    top: 40px;
+
+    right:20px;
+
+    top:40px;
+
+    animation-delay:1.5s;
+
 }
+
+
 
 .whisper-layer span:nth-child(4){
-    left: 80px;
-    top: 90px;
+
+    left:80px;
+
+    top:90px;
+
+    animation-delay:2.2s;
+
 }
+
+
 
 .whisper-layer span:nth-child(5){
-    right: 80px;
-    top: 120px;
+
+    right:80px;
+
+    top:120px;
+
+    animation-delay:1s;
+
 }
+
+
 
 .whisper-layer span:nth-child(6){
-    left: -40px;
-    top: 150px;
+
+    left:-40px;
+
+    top:150px;
+
+    animation-delay:2.8s;
+
 }
+
+
 
 .whisper-layer span:nth-child(7){
-    right: -40px;
-    top: 10px;
+
+    right:-40px;
+
+    top:10px;
+
+    animation-delay:1.8s;
+
 }
+
+
 
 .whisper-layer span:nth-child(8){
-    left: 260px;
-    top: 160px;
+
+    left:260px;
+
+    top:160px;
+
+    animation-delay:3.2s;
+
 }
 
-.believer-choice:hover .whisper-layer span{
-    opacity: .6;
-}
+
+
+
+/* 上下浮动 */
 
 @keyframes whisperFloat{
 
+
     0%{
-        transform: translateY(0);
+
+        transform:translateY(0);
+
     }
 
+
     100%{
-        transform: translateY(-8px);
+
+        transform:translateY(-12px);
+
     }
+
+
+}
+
+
+
+/* 忽明忽暗 */
+
+@keyframes whisperFade{
+
+
+    0%{
+
+        opacity:.12;
+
+    }
+
+
+    50%{
+
+        opacity:.35;
+
+    }
+
+
+    100%{
+
+        opacity:.12;
+
+    }
+
 
 }
 
@@ -1551,12 +1668,12 @@
 }
 
 
-/* =========================
+/* =================================
    Redacted Archive
-========================= */
+================================= */
 
 
-.redacted-text{
+.redacted{
 
     background:#111;
 
@@ -1573,11 +1690,6 @@
     user-select:none;
 
 }
-
-
-/*
-    鼠标经过解除遮挡
-*/
 
 
 .redacted:hover{
@@ -3331,5 +3443,18 @@
 }
 
 
+
+}
+
+
+@media(max-width:600px){
+
+    .warning-label{
+
+        font-size:12px;
+
+        letter-spacing:3px;
+
+    }
 
 }
