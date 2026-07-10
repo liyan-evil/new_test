@@ -744,21 +744,21 @@ if(endingSection && endingMessage){
 
                                 {
 
-                                    duration:900,
+                                    duration:800,
                                     fill:"forwards"
 
                                 }
 
                             );
 
-                        },600);
+                        },500);
 
                     };
 
                     const timer=
                     setInterval(
                         changeMessage,
-                        2800
+                        2600
                     );
 
                     endingObserver.disconnect();
