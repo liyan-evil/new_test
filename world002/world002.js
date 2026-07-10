@@ -452,7 +452,7 @@ if(ritualSection){
                                 );
 
 
-                            },index*800);
+                            },index*600);
 
 
 
@@ -460,7 +460,7 @@ if(ritualSection){
 
 
 
-                    },5000);
+                    },1500);
 
 
 
@@ -478,7 +478,7 @@ if(ritualSection){
                             );
 
 
-                        },9000);
+                        },7000);
 
 
                     }
@@ -511,10 +511,6 @@ if(ritualSection){
 
 
 }
-
-
-
-
 
 
 
@@ -748,21 +744,21 @@ if(endingSection && endingMessage){
 
                                 {
 
-                                    duration:800,
+                                    duration:900,
                                     fill:"forwards"
 
                                 }
 
                             );
 
-                        },500);
+                        },600);
 
                     };
 
                     const timer=
                     setInterval(
                         changeMessage,
-                        2600
+                        2800
                     );
 
                     endingObserver.disconnect();
