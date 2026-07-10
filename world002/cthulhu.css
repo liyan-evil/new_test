@@ -3013,6 +3013,7 @@
 
 }
 
+
 .warning-card{
 
     width:100%;
@@ -3034,13 +3035,14 @@
 }
 
 
+
 /* =========================
-   Desktop Warning
+   手机端隐藏电脑版 Warning
 ========================= */
 
 .warning-label{
 
-    display:block;
+    display:none;
 
     color:#c0392b;
 
@@ -3055,13 +3057,14 @@
 }
 
 
+
 /* =========================
-   Mobile Warning
+   手机端显示 Warning
 ========================= */
 
 .warning-label-mobile{
 
-    display:none;
+    display:block;
 
     color:#c0392b;
 
@@ -3076,9 +3079,11 @@
 }
 
 
+
 /* =========================
    标题
 ========================= */
+
 
 .warning-card h2{
 
@@ -3093,9 +3098,11 @@
 }
 
 
+
 /* =========================
    正文
 ========================= */
+
 
 .warning-card p:not(.warning-label):not(.warning-label-mobile){
 
@@ -3108,27 +3115,6 @@
     color:#555;
 
     letter-spacing:1px;
-
-}
-
-
-/* =========================
-   Mobile
-========================= */
-
-@media (max-width:768px){
-
-    .warning-label{
-
-        display:none;
-
-    }
-
-    .warning-label-mobile{
-
-        display:block;
-
-    }
 
 }
 
