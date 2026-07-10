@@ -3451,7 +3451,7 @@
     display:none;
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 .warning-desktop{
     display:none;
@@ -3459,6 +3459,105 @@
 
 .warning-mobile{
     display:inline;
+}
+
+}
+
+
+
+/* ==========================================
+   Mobile Corruption Layout
+========================================== */
+
+@media (max-width:768px){
+
+.corruption-zone{
+
+    height:260px;
+
+    overflow:visible;
+
+}
+
+.corruption-layer{
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:260px;
+
+}
+
+.noise{
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* 第一排 */
+
+.n1{left:0%;top:0;}
+.n2{left:24%;top:12px;}
+.n3{left:58%;top:0;}
+.n4{left:78%;top:18px;}
+
+
+/* 第二排 */
+
+.n5{left:10%;top:45px;}
+.n6{left:40%;top:52px;}
+.n7{left:68%;top:42px;}
+.n8{left:82%;top:65px;}
+
+
+/* 第三排 */
+
+.n9{left:2%;top:90px;}
+.n10{left:34%;top:102px;}
+.n11{left:63%;top:88px;}
+.n12{left:80%;top:112px;}
+
+
+/* 第四排 */
+
+.n13{left:15%;top:135px;}
+.n14{left:48%;top:142px;}
+.n15{left:73%;top:130px;}
+.n16{left:0%;top:160px;}
+
+
+/* 第五排 */
+
+.n17{left:28%;top:175px;}
+.n18{left:60%;top:182px;}
+.n19{left:84%;top:170px;}
+.n20{left:8%;top:205px;}
+
+
+/* 后面的继续随机铺开 */
+
+.n21{left:42%;top:210px;}
+.n22{left:72%;top:222px;}
+.n23{left:4%;top:235px;}
+.n24{left:33%;top:245px;}
+.n25{left:64%;top:252px;}
+
+.n26,.n27,.n28,.n29,.n30,
+.n31,.n32,.n33,.n34,.n35,
+.n36,.n37,.n38,.n39,.n40,
+.n41,.n42,.n43,.n44,.n45,
+.n46,.n47,.n48,.n49,.n50,
+.n51,.n52,.n53,.n54,.n55,
+.n56,.n57,.n58,.n59,.n60{
+
+    display:none;
+
 }
 
 }
