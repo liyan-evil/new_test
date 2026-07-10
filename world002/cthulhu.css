@@ -3042,6 +3042,27 @@
 }
 
 
+.warning-mobile{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .warning-label{
+        display:none;
+    }
+
+    .warning-mobile{
+        display:block;
+        color:#c0392b;
+        letter-spacing:3px;
+        font-size:12px;
+        font-weight:700;
+        margin-bottom:25px;
+    }
+
+}
+
 
 /* =========================
    Section 标题
