@@ -3451,17 +3451,6 @@
     display:none;
 }
 
-@media(max-width:768px){
-
-.warning-desktop{
-    display:none;
-}
-
-.warning-mobile{
-    display:inline;
-}
-
-}
 
 
 
