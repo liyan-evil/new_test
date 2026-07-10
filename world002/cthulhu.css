@@ -3447,14 +3447,18 @@
 }
 
 
+.warning-mobile{
+    display:none;
+}
+
 @media(max-width:600px){
 
-    .warning-label{
+.warning-desktop{
+    display:none;
+}
 
-        font-size:12px;
-
-        letter-spacing:3px;
-
-    }
+.warning-mobile{
+    display:inline;
+}
 
 }
