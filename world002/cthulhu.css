@@ -149,6 +149,23 @@
 }
 
 
+.warning-label-mobile{
+
+    display:none;
+
+    color:#c0392b;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+    font-size:12px;
+
+    margin-bottom:25px;
+
+}
+
+
 /* Restricted Archive = h2标题 */
 
 .warning-card h2{
@@ -164,7 +181,7 @@
 
 /* 警告正文 */
 
-.warning-card p:not(.warning-label){
+.warning-card p:not(.warning-label):not(.warning-label-mobile)
 
     max-width:720px;
 
@@ -2990,36 +3007,78 @@
    Warning
 ========================= */
 
-
 .warning-section{
 
     margin:45px 0 60px;
 
 }
 
-
-
 .warning-card{
 
     width:100%;
 
+    max-width:900px;
+
     padding:30px 20px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
 
     border-radius:18px;
 
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
 }
 
 
+/* =========================
+   Desktop Warning
+========================= */
 
 .warning-label{
 
+    display:block;
+
+    color:#c0392b;
+
     font-size:12px;
 
-    letter-spacing:3px;
+    font-weight:700;
+
+    letter-spacing:6px;
+
+    margin-bottom:25px;
 
 }
 
 
+/* =========================
+   Mobile Warning
+========================= */
+
+.warning-label-mobile{
+
+    display:none;
+
+    color:#c0392b;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =========================
+   标题
+========================= */
 
 .warning-card h2{
 
@@ -3029,36 +3088,46 @@
 
     line-height:1.4;
 
+    margin-bottom:30px;
+
 }
 
 
+/* =========================
+   正文
+========================= */
 
-.warning-card p:not(.warning-label){
+.warning-card p:not(.warning-label):not(.warning-label-mobile){
 
-    font-size:14px;
+    max-width:720px;
+
+    margin:18px auto;
 
     line-height:1.9;
 
+    color:#555;
+
+    letter-spacing:1px;
+
 }
 
 
-.warning-mobile{
-    display:none;
-}
+/* =========================
+   Mobile
+========================= */
 
 @media (max-width:768px){
 
     .warning-label{
+
         display:none;
+
     }
 
-    .warning-mobile{
+    .warning-label-mobile{
+
         display:block;
-        color:#c0392b;
-        letter-spacing:3px;
-        font-size:12px;
-        font-weight:700;
-        margin-bottom:25px;
+
     }
 
 }
