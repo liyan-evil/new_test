@@ -1,0 +1,464 @@
+/* ==========================================================
+   WORLD 004
+   CHAPTER
+========================================================== */
+
+
+
+/* =========================
+   Page
+========================= */
+
+.chapter-page{
+
+    background:var(--bg);
+
+}
+
+
+
+.chapter-content{
+
+    max-width:900px;
+
+    margin:160px auto 120px;
+
+    padding:0 20px;
+
+}
+
+
+
+
+
+/* =========================
+   Header
+========================= */
+
+.chapter-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.chapter-header .world-id{
+
+    color:var(--pink-dark);
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.chapter-route{
+
+    color:var(--sub);
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    margin-bottom:35px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.chapter-header h1{
+
+    color:var(--pink-dark);
+
+    font-size:52px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.chapter-header h2{
+
+    color:#555;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+}
+
+
+
+
+
+/* =========================
+   Story
+========================= */
+
+.chapter-body{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:60px;
+
+    box-shadow:0 12px 30px rgba(201,111,131,.08);
+
+}
+
+
+
+.chapter-body p{
+
+    font-family:"Noto Sans SC",sans-serif;
+
+    font-size:16px;
+
+    line-height:1.4;
+
+    color:#555;
+
+    text-align:justify;
+
+    text-indent:2em;
+
+    margin-bottom:26px;
+
+}
+
+
+
+.chapter-body p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+
+
+
+/* =========================
+   Navigation
+========================= */
+
+.chapter-nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:40px;
+
+}
+
+
+
+.chapter-nav a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:var(--pink-dark);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    padding:10px 24px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:#fff;
+
+    transition:
+
+        .35s ease;
+
+}
+
+
+
+.chapter-nav a:hover{
+
+    background:var(--pink-light);
+
+    border-color:var(--pink);
+
+}
+
+
+/* =========================
+   Quote
+========================= */
+
+.chapter-body .chapter-quote{
+
+    font-family:"Noto Serif SC",serif;
+
+    font-size:14px;
+
+    line-height:2;
+
+    color:#A8A8A8;
+
+    letter-spacing:.5px;
+
+    text-indent:0;
+
+    margin-top:50px;
+
+}
+
+
+
+/* 作者 */
+
+.quote-author{
+
+    display:block;
+
+    margin-top:18px;
+
+    text-align:right;
+
+    font-size:13px;
+
+    color:#BEBEBE;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================
+   Archive Lock
+========================= */
+
+#archive-content{
+
+    display:none;
+
+}
+
+
+
+#archive-lock{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:65vh;
+
+}
+
+
+
+.archive-window{
+
+    width:520px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:55px;
+
+    text-align:center;
+
+    box-shadow:
+    0 16px 40px rgba(201,111,131,.10);
+
+}
+
+
+
+.archive-label{
+
+    color:var(--pink-dark);
+
+    letter-spacing:6px;
+
+    font-size:13px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.archive-window h2{
+
+    color:var(--pink-dark);
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.archive-text{
+
+    color:var(--sub);
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+}
+
+
+
+#archive-password{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+#archive-password:focus{
+
+    border-color:var(--pink-dark);
+
+}
+
+
+
+#archive-button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:var(--pink-dark);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+#archive-button:hover{
+
+    background:var(--pink);
+
+}
+
+
+
+#archive-error{
+
+    color:#d46d6d;
+
+    font-size:13px;
+
+    margin-top:18px;
+
+    display:none;
+
+}
+
+
+/* =========================
+   Back Button
+========================= */
+
+.chapter-back{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.chapter-back a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:var(--pink-dark);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    padding:10px 24px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:#fff;
+
+    transition:
+
+        .35s ease;
+
+}
+
+
+
+.chapter-back a:hover{
+
+    background:var(--pink-light);
+
+    border-color:var(--pink);
+
+}
