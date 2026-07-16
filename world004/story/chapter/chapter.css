@@ -462,3 +462,254 @@
     border-color:var(--pink);
 
 }
+
+
+/* ==================================================
+   Mobile
+================================================== */
+
+@media (max-width:768px){
+
+    /* =========================
+       Page
+    ========================= */
+
+    .chapter-content{
+
+        margin:110px auto 70px;
+
+        padding:0 18px;
+
+    }
+
+
+    /* =========================
+       Header
+    ========================= */
+
+    .chapter-header{
+
+        margin-bottom:35px;
+
+    }
+
+    .chapter-header .world-id{
+
+        font-size:12px;
+
+        letter-spacing:3px;
+
+        margin-bottom:14px;
+
+    }
+
+    .chapter-route{
+
+        font-size:12px;
+
+        letter-spacing:2px;
+
+        margin-bottom:24px;
+
+    }
+
+    .chapter-header h1{
+
+        font-size:34px;
+
+        letter-spacing:2px;
+
+        margin-bottom:12px;
+
+    }
+
+    .chapter-header h2{
+
+        font-size:18px;
+
+        line-height:1.6;
+
+    }
+
+
+    /* =========================
+       Story
+    ========================= */
+
+    .chapter-body{
+
+        padding:28px 22px;
+
+        border-radius:18px;
+
+    }
+
+    .chapter-body p{
+
+        font-size:15px;
+
+        line-height:2;
+
+        margin-bottom:18px;
+
+        text-indent:2em;
+
+        word-break:break-word;
+
+    }
+
+
+    /* =========================
+       Quote
+    ========================= */
+
+    .chapter-body .chapter-quote{
+
+        font-size:13px;
+
+        line-height:2;
+
+        margin-top:35px;
+
+    }
+
+    .quote-author{
+
+        font-size:12px;
+
+        margin-top:12px;
+
+    }
+
+
+    /* =========================
+       Navigation
+    ========================= */
+
+    .chapter-nav{
+
+        flex-direction:column;
+
+        gap:14px;
+
+        margin-top:30px;
+
+    }
+
+    .chapter-nav a{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:13px 18px;
+
+        font-size:13px;
+
+        letter-spacing:1px;
+
+    }
+
+
+    /* =========================
+       Back Button
+    ========================= */
+
+    .chapter-back{
+
+        margin-bottom:25px;
+
+    }
+
+    .chapter-back a{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:13px 18px;
+
+        font-size:13px;
+
+        letter-spacing:1px;
+
+    }
+
+
+    /* =========================
+       Archive Lock
+    ========================= */
+
+    #archive-lock{
+
+        min-height:55vh;
+
+        padding:20px;
+
+    }
+
+    .archive-window{
+
+        width:100%;
+
+        padding:30px 22px;
+
+        border-radius:18px;
+
+    }
+
+    .archive-label{
+
+        font-size:12px;
+
+        letter-spacing:3px;
+
+        margin-bottom:14px;
+
+    }
+
+    .archive-window h2{
+
+        font-size:22px;
+
+        margin-bottom:16px;
+
+    }
+
+    .archive-text{
+
+        font-size:14px;
+
+        line-height:1.9;
+
+        margin-bottom:24px;
+
+    }
+
+    #archive-password{
+
+        font-size:16px;
+
+        padding:14px 16px;
+
+        margin-bottom:18px;
+
+    }
+
+    #archive-button{
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+    #archive-error{
+
+        font-size:12px;
+
+        margin-top:12px;
+
+    }
+
+}
