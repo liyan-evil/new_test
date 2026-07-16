@@ -1,0 +1,1161 @@
+/* ==========================================================
+   WORLD 004
+   Red Line AU
+   Story Module
+========================================================== */
+
+
+/* =========================
+   Story Block
+========================= */
+
+
+.story-block{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+
+/* =========================
+   Red Card 基础
+========================= */
+
+
+.red-card{
+
+    background:rgba(255,255,255,.9);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:35px 45px;
+
+    box-shadow:
+    0 10px 30px rgba(201,111,131,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+
+/* =========================
+   English Title Spacing
+========================= */
+
+
+.english-card h3{
+
+    letter-spacing:2.5px;
+
+}
+
+
+
+/* 红线装饰 */
+
+
+.red-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    to bottom,
+    var(--pink-dark),
+    var(--pink)
+    );
+
+}
+
+
+
+
+
+/* 普通卡片悬浮 */
+
+
+.red-card:hover,
+.scarlet-record:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 18px 40px rgba(201,111,131,.18);
+
+}
+
+
+
+
+
+.red-card h3{
+
+    color:var(--pink-dark);
+
+    font-size:28px;
+
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+
+}
+
+
+.collapsible-card.active:hover{
+
+    transform:none;
+
+}
+
+
+.red-card p{
+
+    font-family:"Noto Serif SC",serif;
+
+    font-size:16px;
+
+    line-height:2.2;
+
+    letter-spacing:1px;
+
+    color:#555;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.red-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+
+
+
+/* =========================
+   Redvein / Cure
+========================= */
+
+
+.red-double-card{
+
+    display:flex;
+
+    gap:25px;
+
+    width:100%;
+
+}
+
+
+
+.red-double-card .red-card{
+
+    flex:1;
+
+}
+
+
+
+
+
+/* =========================
+   Collapse
+========================= */
+
+
+.collapsible-card{
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.card-title-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+
+
+
+
+.card-title-row h3{
+
+    margin:0;
+
+}
+
+
+
+
+
+.toggle-button{
+
+    flex-shrink:0;
+
+    padding:
+
+    7px 20px;
+
+    border:
+
+    1px solid var(--pink-dark);
+
+    border-radius:30px;
+
+    background:white;
+
+    color:var(--pink-dark);
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+
+
+.toggle-button:hover{
+
+    background:var(--pink-light);
+
+}
+
+
+
+.collapsible-card.active 
+.toggle-button{
+
+    background:var(--pink-dark);
+
+    color:white;
+
+}
+
+
+
+
+
+.card-summary{
+
+    margin-top:15px;
+
+    color:var(--sub);
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+
+
+/* =========================
+   Collapse Animation
+========================= */
+
+
+.card-content{
+
+    overflow:hidden;
+
+    height:0;
+
+    opacity:0;
+
+    transform:translateY(-15px);
+
+    transition:
+
+    height .7s ease,
+
+    opacity .5s ease,
+
+    transform .5s ease;
+
+}
+
+
+
+.collapsible-card.active 
+.card-content{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+
+/* =========================
+   Scarlet Record
+========================= */
+
+
+.scarlet-record{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease;
+
+}
+
+
+
+
+
+.scarlet-record h3{
+
+    text-align:center;
+
+    color:var(--pink-dark);
+
+    font-size:28px;
+
+    letter-spacing:5px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+.scarlet-description{
+
+    text-align:center;
+
+    max-width:650px;
+
+    margin:
+
+    0 auto 35px;
+
+    font-size:14px;
+
+    line-height:2;
+
+    letter-spacing:1px;
+
+    color:var(--sub);
+
+}
+
+
+
+
+
+.scarlet-images{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+
+
+
+
+.scarlet-image{
+
+    width:280px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+.scarlet-image img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+
+}
+
+
+
+.scarlet-record .scarlet-note{
+
+    text-align:center;
+
+    max-width:650px;
+
+    margin:25px auto 0;
+
+    font-size:12px;
+
+    line-height:2;
+
+    letter-spacing:1px;
+
+    color:#BEBEBE;
+
+}
+
+
+
+
+
+/* =========================
+   Strong
+========================= */
+
+
+.red-card strong{
+
+    color:var(--pink-dark);
+
+    font-weight:600;
+
+}
+
+
+
+/* ==========================================================
+   Character Module
+========================================================== */
+
+
+/* =========================
+   Character Grid
+========================= */
+
+
+.character-grid{
+
+
+    display:flex;
+
+
+    gap:25px;
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Character Card
+========================= */
+
+
+.character-card{
+
+
+    flex:1;
+
+
+    display:block;
+
+
+    text-decoration:none;
+
+
+    color:inherit;
+
+
+    background:rgba(255,255,255,.9);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:22px;
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(201,111,131,.08);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease;
+
+
+}
+
+
+
+
+
+
+
+/* 左侧装饰线 */
+
+
+.character-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    top:0;
+
+
+    width:4px;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    to bottom,
+
+    var(--pink-dark),
+
+    var(--pink)
+
+    );
+
+
+}
+
+
+
+
+
+
+
+/* 悬浮 */
+
+
+.character-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 18px 40px rgba(201,111,131,.18);
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Avatar
+========================= */
+
+
+.character-image{
+
+
+    width:150px;
+
+
+    height:150px;
+
+
+    margin:
+
+    0 auto 25px;
+
+
+    border-radius:50%;
+
+
+    overflow:hidden;
+
+
+    border:
+
+    3px solid var(--pink-light);
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+
+
+.character-image img{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Name
+========================= */
+
+
+.character-card h3{
+
+
+    color:var(--pink-dark);
+
+
+    font-size:28px;
+
+
+    letter-spacing:5px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Info
+========================= */
+
+
+.character-intro{
+
+
+    margin-top:20px;
+
+
+    padding-top:20px;
+
+
+    border-top:
+
+    1px solid var(--border);
+
+
+    text-align:left;
+
+
+}
+
+
+
+
+
+
+
+.character-intro p{
+
+
+    font-size:14px;
+
+
+    line-height:2.2;
+
+
+    letter-spacing:1px;
+
+
+    color:var(--sub);
+
+
+    margin-bottom:8px;
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+.character-intro p:last-child{
+
+
+    margin-bottom:0;
+
+
+}
+
+
+
+/* ==========================================================
+   Supporting Character
+========================================================== */
+
+
+/* =========================
+   Supporting Grid
+========================= */
+
+
+.support-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+/* =========================
+   Supporting Card
+========================= */
+
+
+.support-card{
+
+
+    width:280px;
+
+
+    background:rgba(255,255,255,.9);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    border-radius:22px;
+
+
+    padding:30px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(201,111,131,.08);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease;
+
+
+}
+
+
+
+
+
+/* 左侧装饰线 */
+
+
+.support-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    top:0;
+
+
+    width:4px;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    to bottom,
+
+    var(--pink-dark),
+
+    var(--pink)
+
+    );
+
+
+}
+
+
+
+
+
+/* 悬浮效果 */
+
+
+.support-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    box-shadow:
+
+    0 18px 40px rgba(201,111,131,.18);
+
+
+}
+
+
+
+
+
+/* =========================
+   Supporting Avatar
+========================= */
+
+
+.support-card .character-image{
+
+
+    width:110px;
+
+
+    height:110px;
+
+
+    margin:
+
+    0 auto 20px;
+
+
+}
+
+
+
+
+
+/* =========================
+   Supporting Text
+========================= */
+
+
+.support-card h3{
+
+
+    color:var(--pink-dark);
+
+
+    font-size:22px;
+
+
+    letter-spacing:3px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+.support-card p{
+
+
+    font-size:14px;
+
+
+    line-height:2;
+
+
+    letter-spacing:1px;
+
+
+    color:var(--sub);
+
+
+}
+
+
+
+/* ==========================================================
+   Story Route
+========================================================== */
+
+
+
+.story-route{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+
+.story-route{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin-top:45px;
+
+}
+
+
+
+.route-card{
+
+    width:420px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease;
+
+}
+
+
+
+.route-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 18px 40px rgba(201,111,131,.18);
+
+}
+
+
+
+/* =========================
+   封面图片
+========================= */
+
+.route-cover{
+
+    width:100%;
+
+    aspect-ratio:4 / 3;
+
+    overflow:hidden;
+
+}
+
+
+
+.route-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+
+/* =========================
+   文字
+========================= */
+
+.route-card h3{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:var(--pink-dark);
+
+    letter-spacing:2.5px;
+
+}
+
+
+
+.route-title{
+
+    text-align:center;
+
+    color:var(--sub);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    margin:
+
+    12px 0 30px;
+
+}
