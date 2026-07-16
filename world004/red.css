@@ -1344,320 +1344,280 @@
 
 
 /* ==================================================
-   Mobile
+   Mobile Responsive
 ================================================== */
 
 @media (max-width:768px){
 
-    /* =========================
-       Section
-    ========================= */
+/* ---------- Supporting ---------- */
 
-    .story-section{
+.support-grid{
 
-        padding:30px 0 45px;
+    grid-template-columns:1fr;
+    gap:18px;
+    justify-items:center;
 
-    }
+}
 
-    .story-section h2{
+.support-card{
 
-        font-size:20px;
+    width:100%;
+    max-width:420px;
+    padding:25px;
 
-        text-align:center;
+}
 
-        letter-spacing:2px;
+.support-card .character-image{
 
-    }
+    width:90px;
+    height:90px;
 
+}
 
-    /* =========================
-       Cast
-    ========================= */
+.support-card h3{
 
-    .cast-grid{
+    font-size:20px;
 
-        flex-direction:column;
+}
 
-        gap:22px;
+.support-card p{
 
-        margin-top:30px;
+    font-size:13px;
 
-    }
+}
 
-    .cast-card{
 
-        padding:28px 22px;
 
-    }
+/* ---------- Story Route ---------- */
 
-    .cast-avatar{
+.story-route{
 
-        width:120px;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
 
-        height:120px;
+}
 
-        margin-bottom:20px;
+.route-card{
 
-    }
+    width:100%;
+    max-width:520px;
 
-    .cast-card h3{
+}
 
-        font-size:24px;
+.route-card h3{
 
-        margin-bottom:20px;
+    font-size:24px;
+    margin-top:22px;
 
-    }
+}
 
-    .cast-info p{
+.route-title{
 
-        font-size:14px;
+    font-size:13px;
+    margin:10px 20px 24px;
 
-        line-height:2;
+}
 
-    }
 
-    .summary-card{
 
-        margin-top:22px;
+/* ---------- Gallery ---------- */
 
-        padding:28px 22px;
+.gallery-grid{
 
-    }
+    column-count:2;
+    column-gap:14px;
 
-    .summary-card h3{
+}
 
-        font-size:22px;
+.gallery-card{
 
-        margin-bottom:18px;
+    margin-bottom:14px;
 
-    }
+}
 
-    .summary-content p{
+.gallery-caption{
 
-        font-size:14px;
+    padding:18px;
 
-        line-height:2;
+}
 
-    }
+.gallery-caption h3{
 
+    font-size:16px;
+    padding:10px 18px;
 
-    /* =========================
-       Chapter
-    ========================= */
+}
 
-    .chapter-item{
+.gallery-caption p{
 
-        padding:20px;
+    font-size:12px;
+    padding:8px 16px;
 
-    }
+}
 
-    .chapter-item span{
 
-        font-size:17px;
 
-        letter-spacing:1px;
+/* ---------- Lightbox ---------- */
 
-        line-height:1.8;
+#gallery-image{
 
-    }
+    max-width:96vw;
+    max-height:82vh;
 
+}
 
-    /* =========================
-       Gallery
-    ========================= */
+#gallery-close{
 
-    .gallery-grid{
+    top:18px;
+    right:20px;
+    font-size:40px;
 
-        column-count:2;
+}
 
-        column-gap:12px;
+}
 
-    }
 
-    .gallery-card{
 
-        margin-bottom:12px;
+/* ==================================================
+   Small Phone
+================================================== */
 
-    }
+@media (max-width:480px){
 
-    .gallery-caption{
+/* ---------- Supporting ---------- */
 
-        padding:18px;
+.support-grid{
 
-    }
+    gap:16px;
 
-    .gallery-caption p{
+}
 
-        font-size:12px;
+.support-card{
 
-        max-width:100%;
+    padding:22px;
 
-    }
+}
 
+.support-card .character-image{
 
-    /* =========================
-       Lightbox
-    ========================= */
+    width:80px;
+    height:80px;
 
-    #gallery-image{
+}
 
-        max-width:95vw;
+.support-card h3{
 
-        max-height:82vh;
+    font-size:18px;
+    letter-spacing:2px;
 
-    }
+}
 
-    #gallery-close{
+.support-card p{
 
-        top:16px;
+    font-size:13px;
+    line-height:1.9;
 
-        right:20px;
+}
 
-        font-size:38px;
 
-    }
 
+/* ---------- Route ---------- */
 
-    /* =========================
-       Music Player
-    ========================= */
+.story-route{
 
-    .music-player{
+    gap:18px;
 
-        width:100%;
+}
 
-        padding:20px;
+.route-card{
 
-        border-radius:18px;
+    border-radius:18px;
 
-    }
+}
 
-    .music-title{
+.route-card h3{
 
-        font-size:18px;
+    font-size:20px;
+    margin-top:18px;
 
-    }
+}
 
-    .music-artist{
+.route-title{
 
-        font-size:12px;
+    font-size:12px;
+    margin:8px 16px 18px;
 
-    }
+}
 
-    .music-controls{
 
-        gap:14px;
 
-    }
+/* ---------- Gallery ---------- */
 
-    #play-btn{
+.gallery-grid{
 
-        width:46px;
+    column-count:1;
 
-        height:46px;
+}
 
-        font-size:16px;
+.gallery-card{
 
-    }
+    border-radius:16px;
 
-    #current-time{
+}
 
-        width:45px;
+.gallery-card:hover img{
 
-        font-size:12px;
+    transform:none;
+    filter:none;
 
-    }
+}
 
+.gallery-caption{
 
-    /* =========================
-       Character
-    ========================= */
+    opacity:1;
+    position:static;
+    background:#fff;
+    padding:14px;
 
-    .character-grid{
+}
 
-        flex-direction:column;
+.gallery-caption h3{
 
-        gap:18px;
+    display:none;
 
-    }
+}
 
-    .character-card{
+.gallery-caption p{
 
-        padding:22px;
+    max-width:100%;
+    background:none;
+    border:none;
+    color:var(--sub);
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+    padding:0;
+    text-align:center;
 
-        gap:18px;
+}
 
-        align-items:center;
 
-    }
 
-    .character-image{
+/* ---------- Lightbox ---------- */
 
-        width:90px;
+#gallery-image{
 
-        height:90px;
+    max-width:98vw;
+    max-height:78vh;
 
-        flex-shrink:0;
+}
 
-    }
+#gallery-close{
 
-    .character-content{
+    top:12px;
+    right:16px;
+    font-size:34px;
 
-        flex:1;
-
-        min-width:0;
-
-    }
-
-    .character-card h3{
-
-        font-size:22px;
-
-        letter-spacing:2px;
-
-        margin:0 0 12px;
-
-        text-align:left;
-
-    }
-
-    .character-intro{
-
-        padding-top:12px;
-
-    }
-
-    .character-intro p{
-
-        font-size:13px;
-
-        line-height:1.9;
-
-        margin-bottom:5px;
-
-        text-align:left;
-
-    }
-
-
-    /* =========================
-       Back Button
-    ========================= */
-
-    .back-section{
-
-        margin:50px 0 30px;
-
-    }
-
-    .back-button{
-
-        width:100%;
-
-        justify-content:center;
-
-        font-size:13px;
-
-    }
+}
 
 }
