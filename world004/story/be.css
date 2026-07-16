@@ -1152,19 +1152,17 @@
     .story-section h2{
 
         font-size:20px;
-
         letter-spacing:2px;
-
         text-align:center;
 
     }
+
 
     /* ---------- Cast ---------- */
 
     .cast-grid{
 
         flex-direction:column;
-
         gap:25px;
 
     }
@@ -1178,89 +1176,118 @@
     .cast-avatar{
 
         width:140px;
-
         height:140px;
-
-        margin-bottom:22px;
+        margin:0 auto 22px;
 
     }
 
     .cast-card h3{
 
         font-size:24px;
-
         letter-spacing:2px;
-
         margin-bottom:22px;
+        text-align:center;
 
     }
 
     .cast-info p{
 
         font-size:15px;
-
         line-height:2;
 
     }
+
 
     /* ---------- Summary ---------- */
 
     .summary-card{
 
         margin-top:25px;
-
         padding:30px 24px;
 
     }
 
     .summary-card h3{
 
-        font-size:24px;
-
+        font-size:22px;
         letter-spacing:2px;
-
+        line-height:1.6;
+        text-align:center;
+        white-space:pre-line;
         margin-bottom:22px;
+
+    }
+
+    .summary-content{
+
+        text-align:justify;
 
     }
 
     .summary-content p{
 
         font-size:15px;
-
         line-height:2;
 
     }
 
+
     /* ---------- Chapter ---------- */
 
-    .chapter-list{
+.chapter-list{
 
-        gap:18px;
+    gap:18px;
 
-    }
+}
 
-    .chapter-item{
+.chapter-item{
 
-        padding:22px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 
-    }
+    padding:22px;
 
-    .chapter-item span{
+    gap:10px;
 
-        font-size:16px;
+}
 
-        letter-spacing:1px;
+.chapter-item span{
 
-        line-height:1.8;
+    display:block;
 
-    }
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    line-height:1.4;
+
+    margin-bottom:2px;
+
+}
+
+.chapter-item p{
+
+    width:100%;
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:var(--sub);
+
+    text-align:left;
+
+}
+
 
     /* ---------- Gallery ---------- */
 
     .gallery-grid{
 
         column-count:2;
-
         column-gap:12px;
 
     }
@@ -1280,17 +1307,16 @@
     .gallery-caption p{
 
         font-size:12px;
-
         max-width:100%;
 
     }
+
 
     /* ---------- Lightbox ---------- */
 
     #gallery-image{
 
         max-width:96vw;
-
         max-height:82vh;
 
     }
@@ -1298,21 +1324,18 @@
     #gallery-close{
 
         top:18px;
-
         right:20px;
-
         font-size:38px;
 
     }
+
 
     /* ---------- Music ---------- */
 
     .music-player{
 
         width:100%;
-
         padding:22px;
-
         margin:30px auto;
 
     }
@@ -1338,9 +1361,7 @@
     #play-btn{
 
         width:46px;
-
         height:46px;
-
         font-size:16px;
 
     }
@@ -1348,10 +1369,10 @@
     #current-time{
 
         width:45px;
-
         font-size:12px;
 
     }
+
 
     /* ---------- Back ---------- */
 
@@ -1364,9 +1385,7 @@
     .back-button{
 
         padding:12px 26px;
-
         font-size:13px;
-
         letter-spacing:2px;
 
     }
