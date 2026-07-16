@@ -1349,12 +1349,190 @@
 
 @media (max-width:768px){
 
+/* ---------- Story ---------- */
+
+.story-block{
+
+    gap:20px;
+
+}
+
+.red-double-card{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.red-card{
+
+    padding:26px 22px;
+
+}
+
+.red-card h3{
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+}
+
+.red-card p{
+
+    font-size:14px;
+
+    line-height:2;
+
+}
+
+.card-title-row{
+
+    gap:15px;
+
+}
+
+.toggle-button{
+
+    padding:6px 16px;
+
+    font-size:12px;
+
+}
+
+.card-summary{
+
+    font-size:13px;
+
+}
+
+
+
+/* ---------- Scarlet ---------- */
+
+.scarlet-record{
+
+    padding:28px 22px;
+
+}
+
+.scarlet-record h3{
+
+    font-size:24px;
+
+}
+
+.scarlet-description{
+
+    font-size:13px;
+
+    margin-bottom:24px;
+
+}
+
+.scarlet-images{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.scarlet-image{
+
+    width:100%;
+
+}
+
+.scarlet-image img{
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.scarlet-note{
+
+    margin-top:18px;
+
+}
+
+
+
+/* ---------- Character ---------- */
+
+.character-grid{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.character-card{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:18px;
+
+    padding:28px 22px;
+
+}
+
+.character-image{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.character-content{
+
+    width:100%;
+
+}
+
+.character-card h3{
+
+    text-align:center;
+
+    font-size:24px;
+
+    margin-bottom:14px;
+
+}
+
+.character-intro{
+
+    width:100%;
+
+    padding-top:14px;
+
+}
+
+.character-intro p{
+
+    text-align:center;
+
+}
+
+
+
 /* ---------- Supporting ---------- */
 
 .support-grid{
 
     grid-template-columns:1fr;
+
     gap:18px;
+
     justify-items:center;
 
 }
@@ -1362,7 +1540,9 @@
 .support-card{
 
     width:100%;
+
     max-width:420px;
+
     padding:25px;
 
 }
@@ -1370,6 +1550,7 @@
 .support-card .character-image{
 
     width:90px;
+
     height:90px;
 
 }
@@ -1388,12 +1569,14 @@
 
 
 
-/* ---------- Story Route ---------- */
+/* ---------- Route ---------- */
 
 .story-route{
 
     flex-direction:column;
+
     align-items:center;
+
     gap:22px;
 
 }
@@ -1401,6 +1584,7 @@
 .route-card{
 
     width:100%;
+
     max-width:520px;
 
 }
@@ -1408,6 +1592,7 @@
 .route-card h3{
 
     font-size:24px;
+
     margin-top:22px;
 
 }
@@ -1415,6 +1600,7 @@
 .route-title{
 
     font-size:13px;
+
     margin:10px 20px 24px;
 
 }
@@ -1426,6 +1612,7 @@
 .gallery-grid{
 
     column-count:2;
+
     column-gap:14px;
 
 }
@@ -1445,6 +1632,7 @@
 .gallery-caption h3{
 
     font-size:16px;
+
     padding:10px 18px;
 
 }
@@ -1452,6 +1640,7 @@
 .gallery-caption p{
 
     font-size:12px;
+
     padding:8px 16px;
 
 }
@@ -1463,6 +1652,7 @@
 #gallery-image{
 
     max-width:96vw;
+
     max-height:82vh;
 
 }
@@ -1470,7 +1660,9 @@
 #gallery-close{
 
     top:18px;
+
     right:20px;
+
     font-size:40px;
 
 }
@@ -1485,139 +1677,38 @@
 
 @media (max-width:480px){
 
-/* ---------- Supporting ---------- */
+/* ---------- Story ---------- */
 
-.support-grid{
+.red-card{
 
-    gap:16px;
-
-}
-
-.support-card{
-
-    padding:22px;
+    padding:22px 18px;
 
 }
 
-.support-card .character-image{
-
-    width:80px;
-    height:80px;
-
-}
-
-.support-card h3{
-
-    font-size:18px;
-    letter-spacing:2px;
-
-}
-
-.support-card p{
-
-    font-size:13px;
-    line-height:1.9;
-
-}
-
-
-
-/* ---------- Route ---------- */
-
-.story-route{
-
-    gap:18px;
-
-}
-
-.route-card{
-
-    border-radius:18px;
-
-}
-
-.route-card h3{
+.red-card h3{
 
     font-size:20px;
-    margin-top:18px;
 
 }
 
-.route-title{
+.red-card p{
 
-    font-size:12px;
-    margin:8px 16px 18px;
-
-}
-
-
-
-/* ---------- Gallery ---------- */
-
-.gallery-grid{
-
-    column-count:1;
+    font-size:13px;
 
 }
 
-.gallery-card{
+.toggle-button{
 
-    border-radius:16px;
+    padding:5px 14px;
 
-}
-
-.gallery-card:hover img{
-
-    transform:none;
-    filter:none;
-
-}
-
-.gallery-caption{
-
-    opacity:1;
-    position:static;
-    background:#fff;
-    padding:14px;
-
-}
-
-.gallery-caption h3{
-
-    display:none;
-
-}
-
-.gallery-caption p{
-
-    max-width:100%;
-    background:none;
-    border:none;
-    color:var(--sub);
-    backdrop-filter:none;
-    -webkit-backdrop-filter:none;
-    padding:0;
-    text-align:center;
+    font-size:11px;
 
 }
 
 
 
-/* ---------- Lightbox ---------- */
+/* ---------- Scarlet ---------- */
 
-#gallery-image{
+.scarlet-record{
 
-    max-width:98vw;
-    max-height:78vh;
-
-}
-
-#gallery-close{
-
-    top:12px;
-    right:16px;
-    font-size:34px;
-
-}
-
-}
+    padding:22px
