@@ -1159,3 +1159,129 @@
     12px 0 30px;
 
 }
+
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width:768px){
+
+    /* ---------- 通用 ---------- */
+
+    .red-card,
+    .character-card,
+    .support-card,
+    .scarlet-record{
+
+        padding:28px;
+
+    }
+
+    .red-card h3,
+    .scarlet-record h3,
+    .character-card h3{
+
+        font-size:24px;
+
+        letter-spacing:2px;
+
+    }
+
+    .red-card p{
+
+        font-size:15px;
+
+        line-height:2;
+
+    }
+
+    /* ---------- 红线 / Cure ---------- */
+
+    .red-double-card{
+
+        flex-direction:column;
+
+    }
+
+    /* ---------- 主角色 ---------- */
+
+    .character-grid{
+
+        flex-direction:column;
+
+    }
+
+    .character-image{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+    /* ---------- 配角 ---------- */
+
+    .support-grid{
+
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+    }
+
+    .support-card{
+
+        width:100%;
+
+        max-width:360px;
+
+    }
+
+    /* ---------- Scarlet ---------- */
+
+    .scarlet-images{
+
+        flex-direction:column;
+
+        gap:25px;
+
+    }
+
+    .scarlet-image{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+    .scarlet-image img{
+
+        height:auto;
+
+        aspect-ratio:3/4;
+
+    }
+
+    /* ---------- Route ---------- */
+
+    .story-route{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+
+    }
+
+    .route-card{
+
+        width:100%;
+
+        max-width:380px;
+
+    }
+
+}
