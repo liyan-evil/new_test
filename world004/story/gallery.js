@@ -2,202 +2,454 @@ document.addEventListener(
     "DOMContentLoaded",
     ()=>{
 
-        const audio =
-        document.getElementById(
-            "bgm"
-        );
 
-        const playBtn =
-        document.getElementById(
-            "play-btn"
-        );
-
-        const progress =
-        document.getElementById(
-            "progress"
-        );
-
-        const currentTime =
-        document.getElementById(
-            "current-time"
+        const galleryImages =
+        document.querySelectorAll(
+            ".gallery-card img"
         );
 
 
+        const cards =
+        document.querySelectorAll(
+            ".gallery-card"
+        );
 
-        if(
-            !audio ||
-            !playBtn ||
-            !progress ||
-            !currentTime
-        ){
 
-            return;
+        const lightbox =
+        document.getElementById(
+            "gallery-lightbox"
+        );
+
+
+        const lightboxImage =
+        document.getElementById(
+            "gallery-image"
+        );
+
+
+        const closeButton =
+        document.getElementById(
+            "gallery-close"
+        );
+
+
+
+        /* =========================
+           Lightbox 状态
+        ========================= */
+
+
+        let scale = 1;
+
+
+        let translateX = 0;
+
+        let translateY = 0;
+
+
+
+        let dragging = false;
+
+
+        let startX = 0;
+
+        let startY = 0;
+
+
+
+        const MIN_SCALE = 0.25;
+
+        const MAX_SCALE = 5;
+
+
+
+
+
+        function updateImage(){
+
+
+            lightboxImage.style.transform =
+            `
+            translate(
+                ${translateX}px,
+                ${translateY}px
+            )
+            scale(
+                ${scale}
+            )
+            `;
+
 
         }
 
 
 
-        let playing = false;
+
+
+        function resetImage(){
+
+
+            scale = 1;
+
+            translateX = 0;
+
+            translateY = 0;
+
+
+            updateImage();
+
+
+        }
+
+
+
 
 
 
         /* =========================
-           播放 / 暂停
+           打开图片
         ========================= */
 
-        playBtn.addEventListener(
+
+        galleryImages.forEach(
+            (img)=>{
+
+
+                img.addEventListener(
+                    "click",
+                    ()=>{
+
+
+                        lightboxImage.src =
+                        img.src;
+
+
+                        resetImage();
+
+
+                        lightbox.classList.add(
+                            "active"
+                        );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+
+
+
+        /* =========================
+           关闭
+        ========================= */
+
+
+        closeButton.addEventListener(
             "click",
             ()=>{
 
-                if(playing){
 
-                    audio.pause();
+                lightbox.classList.remove(
+                    "active"
+                );
 
-                }else{
 
-                    audio.play();
+            }
+        );
+
+
+
+
+
+        lightbox.addEventListener(
+            "click",
+            (e)=>{
+
+
+                if(
+                    e.target === lightbox
+                ){
+
+                    lightbox.classList.remove(
+                        "active"
+                    );
 
                 }
 
+
             }
         );
+
+
+
+
+
+        document.addEventListener(
+            "keydown",
+            (e)=>{
+
+
+                if(
+                    e.key === "Escape"
+                ){
+
+                    lightbox.classList.remove(
+                        "active"
+                    );
+
+                }
+
+
+            }
+        );
+
+
+
 
 
 
         /* =========================
-           播放状态
+           滚轮缩放
         ========================= */
 
-        audio.addEventListener(
-            "play",
-            ()=>{
 
-                playing = true;
+        lightboxImage.addEventListener(
+            "wheel",
+            (e)=>{
 
-                playBtn.textContent = "❚❚";
 
-            }
-        );
+                e.preventDefault();
 
 
 
-        audio.addEventListener(
-            "pause",
-            ()=>{
+                if(
+                    e.deltaY < 0
+                ){
 
-                playing = false;
+                    scale +=0.15;
 
-                playBtn.textContent = "▶";
+                }
+                else{
 
-            }
-        );
+                    scale -=0.15;
+
+                }
 
 
 
-        /* =========================
-           音乐加载完成
-        ========================= */
-
-        audio.addEventListener(
-            "loadedmetadata",
-            ()=>{
-
-                progress.max =
-                Math.floor(
-                    audio.duration
+                scale = Math.min(
+                    Math.max(
+                        scale,
+                        MIN_SCALE
+                    ),
+                    MAX_SCALE
                 );
 
+
+
+                updateImage();
+
+
+            },
+            {
+                passive:false
             }
         );
 
 
 
+
+
+
+
         /* =========================
-           时间更新
+           拖动
         ========================= */
 
-        audio.addEventListener(
-            "timeupdate",
-            ()=>{
 
-                progress.value =
-                Math.floor(
-                    audio.currentTime
+        lightboxImage.addEventListener(
+            "mousedown",
+            (e)=>{
+
+
+                if(scale<=1){
+
+                    return;
+
+                }
+
+
+                dragging=true;
+
+
+
+                startX =
+                e.clientX-translateX;
+
+
+                startY =
+                e.clientY-translateY;
+
+
+
+                lightboxImage.classList.add(
+                    "dragging"
                 );
 
 
+            }
+        );
 
-                currentTime.textContent =
-                formatTime(
-                    audio.currentTime
+
+
+
+
+        document.addEventListener(
+            "mousemove",
+            (e)=>{
+
+
+                if(!dragging){
+
+                    return;
+
+                }
+
+
+
+                translateX =
+                e.clientX-startX;
+
+
+                translateY =
+                e.clientY-startY;
+
+
+
+                updateImage();
+
+
+            }
+        );
+
+
+
+
+
+        document.addEventListener(
+            "mouseup",
+            ()=>{
+
+
+                dragging=false;
+
+
+                lightboxImage.classList.remove(
+                    "dragging"
                 );
 
+
             }
         );
 
 
 
+
+
+
         /* =========================
-           拖动进度条
+           双击恢复
         ========================= */
 
-        progress.addEventListener(
-            "input",
+
+        lightboxImage.addEventListener(
+            "dblclick",
             ()=>{
 
-                audio.currentTime =
-                progress.value;
+
+                resetImage();
+
 
             }
         );
 
 
 
+
+
+
         /* =========================
-           播放结束
+           Scroll Reveal
         ========================= */
 
-        audio.addEventListener(
-            "ended",
-            ()=>{
 
-                playing = false;
+        const observer =
+new IntersectionObserver(
+    (entries)=>{
 
-                playBtn.textContent = "▶";
 
-                progress.value = 0;
+        entries.forEach(
+            entry=>{
 
-                currentTime.textContent = "0:00";
+
+                if(
+                    entry.isIntersecting
+                ){
+
+                    entry.target.classList.add(
+                        "show"
+                    );
+
+
+                }
+                else{
+
+
+                    entry.target.classList.remove(
+                        "show"
+                    );
+
+
+                }
+
 
             }
         );
 
 
+    },
+    {
+        threshold:.15
+    }
+);
 
-        /* =========================
-           时间格式
-        ========================= */
 
-        function formatTime(seconds){
 
-            const minute =
-            Math.floor(
-                seconds / 60
-            );
 
-            const second =
-            Math.floor(
-                seconds % 60
-            );
 
-            return `${minute}:${second
-                .toString()
-                .padStart(
-                    2,
-                    "0"
-                )}`;
+        cards.forEach(
+            card=>{
 
-        }
+
+                card.classList.add(
+                    "hidden"
+                );
+
+
+                observer.observe(
+                    card
+                );
+
+
+            }
+        );
+
+
 
     }
 );
