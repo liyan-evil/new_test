@@ -1524,3 +1524,600 @@
     translateY(0);
 
 }
+
+
+/* ==================================================
+   WORLD 005 - Mobile & Tablet
+================================================== */
+
+/* =========================
+   Phone (≤768px)
+========================= */
+
+@media (max-width:768px){
+
+    /* ==========================================================
+       Character Grid
+    ========================================================== */
+
+    .character-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .character-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 28px 22px;
+        gap: 18px;
+        border-radius: 18px;
+    }
+
+    .character-card::before {
+        width: 100%;
+        height: 4px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, var(--pink-dark), var(--pink));
+    }
+
+    .character-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .character-image {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .character-content {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .character-card h3 {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .character-intro {
+        padding-top: 14px;
+    }
+
+    .character-intro p {
+        font-size: 13px;
+        line-height: 1.9;
+        text-align: center;
+    }
+
+    .character-background {
+        width: 100%;
+    }
+
+    .character-background h4 {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    .character-background p {
+        font-size: 13px;
+        line-height: 1.9;
+        text-align: justify;
+    }
+
+
+    /* ==========================================================
+       Appearance Module
+    ========================================================== */
+
+    .appearance-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 30px;
+    }
+
+    .appearance-divider {
+        display: none;
+    }
+
+    .appearance-column {
+        gap: 18px;
+    }
+
+    .appearance-card {
+        flex-direction: column;
+        border-radius: 18px;
+    }
+
+    .appearance-card::before {
+        width: 100%;
+        height: 4px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, var(--pink-dark), var(--pink));
+    }
+
+    .appearance-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .appearance-photo {
+        width: 100%;
+        min-height: 200px;
+        height: 220px;
+        flex-shrink: 0;
+    }
+
+    .appearance-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .appearance-info {
+        padding: 22px 20px;
+    }
+
+    .appearance-info h3 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .appearance-info p {
+        font-size: 13px;
+        line-height: 1.9;
+        text-align: justify;
+    }
+
+
+    /* ==========================================================
+       Timeline
+    ========================================================== */
+
+    .timeline-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+
+    .timeline-column {
+        gap: 24px;
+        padding: 0 !important;
+    }
+
+    .timeline-left {
+        padding-right: 0 !important;
+    }
+
+    .timeline-right {
+        padding-left: 0 !important;
+    }
+
+    .timeline-card {
+        padding: 22px 20px;
+        border-radius: 18px;
+    }
+
+    .timeline-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .timeline-card::before,
+    .timeline-card::after {
+        display: none !important;
+    }
+
+    .timeline-card > p {
+        font-size: 14px;
+        line-height: 1.9;
+        letter-spacing: 0.5px;
+    }
+
+    .timeline-toggle {
+        font-size: 12px;
+        padding: 6px 16px;
+        margin-top: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 链接样式的toggle */
+    .timeline-toggle[href] {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .timeline-extra p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .timeline-card.active .timeline-extra {
+        margin-top: 14px;
+        max-height: 500px;
+    }
+
+
+    /* ==========================================================
+       Story Section
+    ========================================================== */
+
+    .story-section {
+        margin-bottom: 0;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-top: -14px;
+        margin-bottom: 28px;
+    }
+
+    .story-section h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+
+    .story-section p {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+
+    /* ==========================================================
+       Chapter List
+    ========================================================== */
+
+    .chapter-list {
+        gap: 16px;
+    }
+
+    .chapter-item {
+        padding: 22px 20px;
+        border-radius: 18px;
+        gap: 10px;
+    }
+
+    .chapter-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .chapter-item span {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .chapter-item p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+
+    /* ==========================================================
+       Gallery
+    ========================================================== */
+
+    .gallery-grid {
+        column-count: 2;
+        column-gap: 12px;
+        margin-top: 30px;
+    }
+
+    .gallery-card {
+        margin-bottom: 12px;
+        border-radius: 14px;
+    }
+
+    .gallery-card:hover img {
+        transform: scale(1.03);
+        filter: blur(2px);
+    }
+
+    .gallery-caption {
+        padding: 20px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 14px;
+        padding: 8px 16px;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-caption p {
+        font-size: 11px;
+        padding: 6px 14px;
+        max-width: 90%;
+        line-height: 1.6;
+    }
+
+    .gallery-card.show {
+        transform: translateY(0);
+    }
+
+
+    /* ==========================================================
+       Gallery Lightbox
+    ========================================================== */
+
+    #gallery-image {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+
+    #gallery-close {
+        top: 18px;
+        right: 24px;
+        font-size: 38px;
+    }
+
+}
+
+
+/* ==================================================
+   Tablet (769px – 1024px)
+================================================== */
+
+@media (min-width:769px) and (max-width:1024px){
+
+    /* ==========================================================
+       Character Grid
+    ========================================================== */
+
+    .character-grid {
+        gap: 20px;
+    }
+
+    .character-card {
+        padding: 28px 24px;
+        gap: 20px;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .character-card::before {
+        width: 100%;
+        height: 4px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, var(--pink-dark), var(--pink));
+    }
+
+    .character-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .character-content {
+        height: auto;
+        flex: none;
+        width: 100%;
+    }
+
+    .character-card h3 {
+        font-size: 24px;
+        letter-spacing: 2.5px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    .character-intro p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .character-background h4 {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .character-background p {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+
+    /* ==========================================================
+       Appearance Module
+    ========================================================== */
+
+    .appearance-grid {
+        gap: 28px;
+        margin-top: 35px;
+    }
+
+    .appearance-card {
+        border-radius: 20px;
+    }
+
+    .appearance-photo {
+        width: 130px;
+        min-height: 150px;
+    }
+
+    .appearance-info {
+        padding: 24px 22px;
+    }
+
+    .appearance-info h3 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+    }
+
+    .appearance-info p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+
+    /* ==========================================================
+       Timeline
+    ========================================================== */
+
+    .timeline-container {
+        gap: 50px;
+        margin-top: 38px;
+    }
+
+    .timeline-left {
+        padding-right: 25px;
+    }
+
+    .timeline-right {
+        padding-left: 25px;
+    }
+
+    .timeline-column {
+        gap: 30px;
+    }
+
+    .timeline-card {
+        padding: 24px 26px;
+        border-radius: 20px;
+    }
+
+    /* 左侧节点位置调整 */
+    .timeline-left .timeline-card::after {
+        right: -35px;
+    }
+
+    .timeline-left .timeline-card::before {
+        right: -25px;
+        width: 25px;
+    }
+
+    /* 右侧节点位置调整 */
+    .timeline-right .timeline-card::after {
+        left: -35px;
+    }
+
+    .timeline-right .timeline-card::before {
+        left: -25px;
+        width: 25px;
+    }
+
+    .timeline-card > p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .timeline-toggle {
+        font-size: 12px;
+        padding: 6px 18px;
+    }
+
+
+    /* ==========================================================
+       Story Section
+    ========================================================== */
+
+    .section-subtitle {
+        font-size: 13px;
+        letter-spacing: 2.5px;
+        margin-top: -16px;
+    }
+
+    .story-section h2 {
+        font-size: 21px;
+        letter-spacing: 2.5px;
+    }
+
+    .story-section p {
+        font-size: 14px;
+        line-height: 2.1;
+    }
+
+
+    /* ==========================================================
+       Chapter List
+    ========================================================== */
+
+    .chapter-item {
+        padding: 26px 32px;
+        border-radius: 20px;
+    }
+
+    .chapter-item span {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .chapter-item p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+
+    /* ==========================================================
+       Gallery
+    ========================================================== */
+
+    .gallery-grid {
+        column-count: 3;
+        column-gap: 14px;
+        margin-top: 38px;
+    }
+
+    .gallery-card {
+        margin-bottom: 14px;
+        border-radius: 16px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 15px;
+        padding: 10px 18px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .gallery-caption p {
+        font-size: 12px;
+        padding: 8px 16px;
+        max-width: 82%;
+    }
+
+    .gallery-card.show {
+        transform: translateY(0);
+    }
+
+
+    /* ==========================================================
+       Gallery Lightbox
+    ========================================================== */
+
+    #gallery-image {
+        max-width: 88vw;
+        max-height: 85vh;
+    }
+
+    #gallery-close {
+        top: 24px;
+        right: 32px;
+        font-size: 44px;
+    }
+
+}
