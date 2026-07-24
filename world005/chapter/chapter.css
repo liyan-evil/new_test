@@ -1,0 +1,999 @@
+/* ==========================================================
+   WORLD 005
+   CHAPTER
+========================================================== */
+
+
+
+/* =========================
+   Page
+========================= */
+
+.chapter-page{
+
+    background:var(--bg);
+
+}
+
+
+
+.chapter-content{
+
+    max-width:900px;
+
+    margin:160px auto 120px;
+
+    padding:0 20px;
+
+}
+
+
+
+
+
+/* =========================
+   Header
+========================= */
+
+.chapter-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.chapter-header .world-id{
+
+    color:var(--pink-dark);
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.chapter-route{
+
+    color:var(--sub);
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    margin-bottom:35px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.chapter-header h1{
+
+    color:var(--pink-dark);
+
+    font-size:52px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.chapter-header h2{
+
+    color:#555;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+}
+
+
+
+
+
+/* =========================
+   Story
+========================= */
+
+.chapter-body{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:60px;
+
+    box-shadow:0 12px 30px rgba(201,111,131,.08);
+
+}
+
+
+
+.chapter-body p{
+
+    font-family:"Noto Sans SC",sans-serif;
+
+    font-size:16px;
+
+    line-height:1.4;
+
+    color:#555;
+
+    text-align:justify;
+
+    text-indent:2em;
+
+    margin-bottom:26px;
+
+}
+
+
+
+.chapter-body p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+
+
+
+/* =========================
+   Navigation
+========================= */
+
+.chapter-nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:40px;
+
+}
+
+
+
+.chapter-nav a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:var(--pink-dark);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    padding:10px 24px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:#fff;
+
+    transition:
+
+        .35s ease;
+
+}
+
+
+
+.chapter-nav a:hover{
+
+    background:var(--pink-light);
+
+    border-color:var(--pink);
+
+}
+
+
+/* =========================
+   Quote
+========================= */
+
+.chapter-body .chapter-quote{
+
+    font-family:"Noto Serif SC",serif;
+
+    font-size:14px;
+
+    line-height:2;
+
+    color:#A8A8A8;
+
+    letter-spacing:.5px;
+
+    text-indent:0;
+
+    margin-top:50px;
+
+}
+
+
+
+/* 作者 */
+
+.quote-author{
+
+    display:block;
+
+    margin-top:18px;
+
+    text-align:right;
+
+    font-size:13px;
+
+    color:#BEBEBE;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================
+   Summary
+========================= */
+
+.chapter-body .chapter-summary{
+
+    font-family:"Noto Serif SC",serif;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    color:#A8A8A8;
+
+    letter-spacing:.5px;
+
+    text-indent:0;
+
+    margin-top:0;
+
+    margin-bottom:5px;
+
+    padding-left:30px;
+
+}
+
+
+/* =========================
+   Archive Lock
+========================= */
+
+#archive-content{
+
+    display:none;
+
+}
+
+
+
+#archive-lock{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:65vh;
+
+}
+
+
+
+.archive-window{
+
+    width:520px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:55px;
+
+    text-align:center;
+
+    box-shadow:
+    0 16px 40px rgba(201,111,131,.10);
+
+}
+
+
+
+.archive-label{
+
+    color:var(--pink-dark);
+
+    letter-spacing:6px;
+
+    font-size:13px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.archive-window h2{
+
+    color:var(--pink-dark);
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.archive-text{
+
+    color:var(--sub);
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+}
+
+
+
+#archive-password{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+#archive-password:focus{
+
+    border-color:var(--pink-dark);
+
+}
+
+
+
+#archive-button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:var(--pink-dark);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+#archive-button:hover{
+
+    background:var(--pink);
+
+}
+
+
+
+#archive-error{
+
+    color:#d46d6d;
+
+    font-size:13px;
+
+    margin-top:18px;
+
+    display:none;
+
+}
+
+
+/* =========================
+   Back Button
+========================= */
+
+.chapter-back{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.chapter-back a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:var(--pink-dark);
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    padding:10px 24px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    background:#fff;
+
+    transition:
+
+        .35s ease;
+
+}
+
+
+
+.chapter-back a:hover{
+
+    background:var(--pink-light);
+
+    border-color:var(--pink);
+
+}
+
+
+/* ==================================================
+   Mobile & Tablet
+================================================== */
+
+/* =========================
+   Phone (≤768px)
+========================= */
+
+@media (max-width:768px){
+
+    /* =========================
+       Page
+    ========================= */
+
+    .chapter-content{
+        margin:110px auto 70px;
+        padding:0 18px;
+    }
+
+
+    /* =========================
+       Header
+    ========================= */
+
+    .chapter-header{
+        margin-bottom:35px;
+    }
+
+    .chapter-header .world-id{
+        font-size:12px;
+        letter-spacing:3px;
+        margin-bottom:14px;
+    }
+
+    .chapter-route{
+        font-size:12px;
+        letter-spacing:2px;
+        margin-bottom:24px;
+    }
+
+    .chapter-header h1{
+        font-size:34px;
+        letter-spacing:2px;
+        margin-bottom:12px;
+    }
+
+    .chapter-header h2{
+        font-size:18px;
+        line-height:1.6;
+    }
+
+
+    /* =========================
+       Story
+    ========================= */
+
+    .chapter-body{
+        padding:28px 22px;
+        border-radius:18px;
+    }
+
+    .chapter-body p{
+        font-size:15px;
+        line-height:2;
+        margin-bottom:18px;
+        text-indent:2em;
+        word-break:break-word;
+    }
+
+
+    /* =========================
+       Quote
+    ========================= */
+
+    .chapter-body .chapter-quote{
+        font-size:13px;
+        line-height:2;
+        margin-top:35px;
+    }
+
+    .quote-author{
+        font-size:12px;
+        margin-top:12px;
+    }
+
+
+    /* =========================
+       Navigation
+    ========================= */
+
+    .chapter-nav{
+        flex-direction:column;
+        gap:14px;
+        margin-top:30px;
+    }
+
+    .chapter-nav a{
+        width:100%;
+        text-align:center;
+        padding:13px 18px;
+        font-size:13px;
+        letter-spacing:1px;
+    }
+
+
+    /* =========================
+       Back Button
+    ========================= */
+
+    .chapter-back{
+        margin-bottom:25px;
+    }
+
+    .chapter-back a{
+        width:100%;
+        text-align:center;
+        padding:13px 18px;
+        font-size:13px;
+        letter-spacing:1px;
+    }
+
+
+    /* =========================
+       Archive Lock
+    ========================= */
+
+    #archive-lock{
+        min-height:55vh;
+        padding:20px;
+    }
+
+    .archive-window{
+        width:100%;
+        padding:30px 22px;
+        border-radius:18px;
+    }
+
+    .archive-label{
+        font-size:12px;
+        letter-spacing:3px;
+        margin-bottom:14px;
+    }
+
+    .archive-window h2{
+        font-size:22px;
+        margin-bottom:16px;
+    }
+
+    .archive-text{
+        font-size:14px;
+        line-height:1.9;
+        margin-bottom:24px;
+    }
+
+    #archive-password{
+        font-size:16px;
+        padding:14px 16px;
+        margin-bottom:18px;
+    }
+
+    #archive-button{
+        padding:14px;
+        font-size:15px;
+    }
+
+    #archive-error{
+        font-size:12px;
+        margin-top:12px;
+    }
+
+
+    /* =========================
+       Subscribe Popup
+    ========================= */
+
+    #subscribe-overlay{
+        padding:16px;
+        backdrop-filter:blur(4px);
+        -webkit-backdrop-filter:blur(4px);
+    }
+
+    #subscribe-sheet{
+        width:min(400px,94vw);
+        min-height:320px;
+        border-radius:20px;
+        transform:
+            translateY(80px)
+            scale(.92);
+    }
+
+    .subscribe-panel{
+        padding:32px 24px;
+        min-height:320px;
+    }
+
+    .subscribe-account{
+        font-size:12px;
+        letter-spacing:1.5px;
+        margin-bottom:10px;
+    }
+
+    .subscribe-panel h2{
+        font-size:26px;
+        letter-spacing:1px;
+        margin-bottom:14px;
+    }
+
+    .subscribe-price{
+        font-size:20px;
+        margin-bottom:18px;
+    }
+
+    .subscribe-description{
+        font-size:14px;
+        line-height:1.8;
+        margin-bottom:26px;
+    }
+
+    .subscribe-buttons{
+        flex-direction:column;
+        gap:12px;
+        width:100%;
+        margin-top:4px;
+    }
+
+    .subscribe-buttons button{
+        min-width:unset;
+        width:100%;
+        padding:16px 20px;
+        font-size:14px;
+        letter-spacing:1.5px;
+    }
+
+    .subscribe-buttons button:hover{
+        transform:translateY(-2px);
+    }
+
+    .subscribe-check{
+        width:64px;
+        height:64px;
+        font-size:32px;
+        margin-bottom:18px;
+    }
+
+    /* 弹窗动画微调 */
+    #subscribe-overlay.show #subscribe-sheet{
+        animation:
+            subscribeBounceMobile .5s
+            cubic-bezier(.2,1.25,.25,1)
+            forwards;
+    }
+
+    @keyframes subscribeBounceMobile{
+        0%{
+            transform:
+                translateY(80px)
+                scale(.90);
+        }
+        60%{
+            transform:
+                translateY(-6px)
+                scale(1.01);
+        }
+        82%{
+            transform:
+                translateY(4px)
+                scale(.995);
+        }
+        100%{
+            transform:
+                translateY(0)
+                scale(1);
+        }
+    }
+
+    #subscribe-overlay.hide #subscribe-sheet{
+        transform:
+            translateY(40px)
+            scale(.94);
+        transition:
+            transform .2s ease;
+    }
+
+}
+
+
+/* ==================================================
+   Tablet (769px – 1024px)
+================================================== */
+
+@media (min-width:769px) and (max-width:1024px){
+
+    /* =========================
+       Page
+    ========================= */
+
+    .chapter-content{
+        margin:140px auto 100px;
+        padding:0 40px;
+        max-width:780px;
+    }
+
+
+    /* =========================
+       Header
+    ========================= */
+
+    .chapter-header{
+        margin-bottom:42px;
+    }
+
+    .chapter-header .world-id{
+        font-size:13px;
+        letter-spacing:4px;
+        margin-bottom:16px;
+    }
+
+    .chapter-route{
+        font-size:13px;
+        letter-spacing:3px;
+        margin-bottom:28px;
+    }
+
+    .chapter-header h1{
+        font-size:46px;
+        letter-spacing:3px;
+        margin-bottom:14px;
+    }
+
+    .chapter-header h2{
+        font-size:22px;
+        letter-spacing:1.5px;
+    }
+
+
+    /* =========================
+       Story
+    ========================= */
+
+    .chapter-body{
+        padding:48px 50px;
+        border-radius:22px;
+    }
+
+    .chapter-body p{
+        font-size:16px;
+        line-height:1.8;
+        margin-bottom:22px;
+        text-indent:2em;
+    }
+
+
+    /* =========================
+       Quote
+    ========================= */
+
+    .chapter-body .chapter-quote{
+        font-size:14px;
+        line-height:2;
+        margin-top:42px;
+    }
+
+    .quote-author{
+        font-size:13px;
+        margin-top:14px;
+    }
+
+
+    /* =========================
+       Navigation
+    ========================= */
+
+    .chapter-nav{
+        gap:18px;
+        margin-top:36px;
+    }
+
+    .chapter-nav a{
+        padding:12px 28px;
+        font-size:14px;
+        letter-spacing:2px;
+    }
+
+
+    /* =========================
+       Back Button
+    ========================= */
+
+    .chapter-back{
+        margin-bottom:30px;
+    }
+
+    .chapter-back a{
+        padding:12px 28px;
+        font-size:14px;
+        letter-spacing:2px;
+    }
+
+
+    /* =========================
+       Archive Lock
+    ========================= */
+
+    #archive-lock{
+        min-height:60vh;
+        padding:30px;
+    }
+
+    .archive-window{
+        width:440px;
+        padding:44px 40px;
+        border-radius:22px;
+    }
+
+    .archive-label{
+        font-size:12px;
+        letter-spacing:4px;
+        margin-bottom:16px;
+    }
+
+    .archive-window h2{
+        font-size:26px;
+        margin-bottom:16px;
+    }
+
+    .archive-text{
+        font-size:14px;
+        line-height:2;
+        margin-bottom:28px;
+    }
+
+    #archive-password{
+        font-size:15px;
+        padding:14px 18px;
+        margin-bottom:20px;
+    }
+
+    #archive-button{
+        padding:14px;
+        font-size:15px;
+    }
+
+
+    /* =========================
+       Subscribe Popup
+    ========================= */
+
+    #subscribe-overlay{
+        padding:24px;
+        backdrop-filter:blur(5px);
+        -webkit-backdrop-filter:blur(5px);
+    }
+
+    #subscribe-sheet{
+        width:460px;
+        min-height:360px;
+        border-radius:24px;
+    }
+
+    .subscribe-panel{
+        padding:38px 36px;
+        min-height:360px;
+    }
+
+    .subscribe-account{
+        font-size:13px;
+        letter-spacing:2px;
+        margin-bottom:10px;
+    }
+
+    .subscribe-panel h2{
+        font-size:28px;
+        letter-spacing:1.5px;
+        margin-bottom:16px;
+    }
+
+    .subscribe-price{
+        font-size:22px;
+        margin-bottom:20px;
+    }
+
+    .subscribe-description{
+        font-size:15px;
+        line-height:1.9;
+        margin-bottom:30px;
+    }
+
+    .subscribe-buttons{
+        gap:14px;
+    }
+
+    .subscribe-buttons button{
+        min-width:130px;
+        padding:14px 22px;
+        font-size:14px;
+        letter-spacing:1.5px;
+    }
+
+    .subscribe-check{
+        width:76px;
+        height:76px;
+        font-size:38px;
+        margin-bottom:20px;
+    }
+
+}
