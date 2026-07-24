@@ -1525,7 +1525,6 @@
 
 }
 
-
 /* ==================================================
    WORLD 005 - Mobile & Tablet
 ================================================== */
@@ -1682,12 +1681,13 @@
 
 
     /* ==========================================================
-       Timeline
+       Timeline - 修复：保持左右交替顺序
     ========================================================== */
 
     .timeline-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
         margin-top: 30px;
         padding-bottom: 10px;
     }
@@ -1696,17 +1696,18 @@
         display: none;
     }
 
+    /* 所有列都去掉padding，按顺序排列 */
     .timeline-column {
+        display: flex;
+        flex-direction: column;
         gap: 24px;
         padding: 0 !important;
+        width: 100%;
     }
 
-    .timeline-left {
-        padding-right: 0 !important;
-    }
-
+    .timeline-left,
     .timeline-right {
-        padding-left: 0 !important;
+        padding: 0 !important;
     }
 
     .timeline-card {
@@ -1757,7 +1758,7 @@
 
 
     /* ==========================================================
-       Story Section
+       Story Section - 修复：标题左对齐
     ========================================================== */
 
     .story-section {
@@ -1769,13 +1770,14 @@
         letter-spacing: 2px;
         margin-top: -14px;
         margin-bottom: 28px;
+        text-align: center;
     }
 
     .story-section h2 {
         font-size: 20px;
         letter-spacing: 2px;
         margin-bottom: 18px;
-        text-align: center;
+        text-align: left;  /* 修复：左对齐，与桌面保持一致 */
     }
 
     .story-section p {
@@ -2039,11 +2041,13 @@
         font-size: 13px;
         letter-spacing: 2.5px;
         margin-top: -16px;
+        text-align: center;
     }
 
     .story-section h2 {
         font-size: 21px;
         letter-spacing: 2.5px;
+        text-align: left;  /* 保持一致 */
     }
 
     .story-section p {
